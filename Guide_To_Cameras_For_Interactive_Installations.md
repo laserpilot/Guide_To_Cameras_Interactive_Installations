@@ -28,7 +28,7 @@ Let's start with the most basic and accessible options for most people working w
 
 ----------------
 <h2>1. The Basic Webcam - RGB</h2>
-<a href="http://www.creativeapplications.net/wp-content/uploads/2013/02/2066516480_a4a196d518_o.jpg"><img class="alignnone size-large wp-image-32566" src="http://www.creativeapplications.net/wp-content/uploads/2013/02/2066516480_a4a196d518_o-640x426.jpg" alt="2066516480_a4a196d518_o" width="640" height="426" /></a>
+![BasicWebcam](images/webcam.jpg)
 
 <small>(<a href="http://www.flickr.com/photos/designios/2066516480/" target="_blank">image source</a>)</small>
 
@@ -88,7 +88,7 @@ Be warned, due to some shifts in how Quicktime is handled in OSX (QT_kit-&gt; AV
 
 --------------------
 <h2>2. Other RGB cameras</h2>
-<a href="http://www.creativeapplications.net/wp-content/uploads/2013/02/epic_stock1.jpeg"><img class="alignnone size-large wp-image-32565" src="http://www.creativeapplications.net/wp-content/uploads/2013/02/epic_stock1-640x397.jpeg" alt="epic_stock1" width="640" height="397" /></a>
+![otherrgb](images/red.jpg)
 
 <small>(<a href="http://www.brainfarmcinema.com/red.aspx" target="_blank">image source</a>)</small>
 
@@ -115,7 +115,7 @@ You're sometimes limited by the capture device and its support on your intended 
 
 --------------
 <h2>3. Infrared Cameras</h2>
-<a href="http://www.creativeapplications.net/wp-content/uploads/2013/02/IR_example.jpeg"><img class="alignnone size-large wp-image-32564" src="http://www.creativeapplications.net/wp-content/uploads/2013/02/IR_example-640x216.jpeg" alt="IR_example" width="640" height="216" /></a>
+![infraredimage](images/infrared.jpg)
 
 These are really an essential tool for anyone working with interactive installations. Our visible light goes from 400-700nm, but certain cameras have the ability to see from 700-1000nm. This allows you to hide tracking lights (IR LED's or IR floodlights) and do other tracking of things not visible to the human eye.
 
@@ -165,7 +165,7 @@ The Sony M183 or M383 are classic low latency cams used for IR sensing, but are 
 
 ---------------
 <h2>4. Depth Cameras</h2>
-<a href="http://www.creativeapplications.net/wp-content/uploads/2013/02/depth_sensor_camera_2.jpg"><img class="alignnone size-large wp-image-32562" src="http://www.creativeapplications.net/wp-content/uploads/2013/02/depth_sensor_camera_2-640x634.jpg" alt="depth_sensor_camera_2" width="640" height="634" /></a>
+![depthimage](images/depth.jpg)
 
 (<a href="http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html" target="_blank">image source</a>)
 
@@ -204,17 +204,13 @@ LIDAR/Structured light was used to get the massive scans of the spaces in this R
 
 <iframe src="http://www.youtube.com/embed/8nTFjVm9sTQ?rel=0" width="640" height="480" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-Kinect used for skeleton tracking in this interactive DJ piece:
-
-<iframe src="http://www.youtube.com/embed/WOtdH5ECJIo?rel=0" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-
 <strong>Further reading:</strong>
 
 If you're just looking for stereo vision capture that can infer depth info, check out the <a href="http://www.ptgrey.com/products/bumblebee2/bumblebee2_stereo_camera.asp&gt; Point Grey Bumblebee &lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=">Readings on structured light and how it works</a>
 
 --
 <h2>5. Thermal Cameras</h2>
-<a href="http://www.creativeapplications.net/wp-content/uploads/2013/02/thermal.jpg"><img class="alignnone size-large wp-image-32588" src="http://www.creativeapplications.net/wp-content/uploads/2013/02/thermal-640x488.jpg" alt="thermal" width="640" height="488" /></a>
+![thermalimage](images/thermal.jpg)
 
 <small>(<a href="http://www.humintell.com/2011/09/truthfulness-detection/thermal/" target="_blank">image source</a>)</small>
 
