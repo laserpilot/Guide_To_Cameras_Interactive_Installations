@@ -1,4 +1,4 @@
-##Guide to Cameras for Interactive Installations </h2>
+#Guide to Cameras for Interactive Installations
 
 
 #### Original Text by [Blair Neal](http://blairneal.com) 2013
@@ -14,20 +14,20 @@ Each type of imager typically has some amazing strengths and some really hinderi
 
 <strong>Questions to consider when in planning phases:</strong>
 
-• Where is it being set up?
-• Will it be outside or in the presence of direct sunlight?
-• What is the lighting control like in the space? Does it change throughout the day?
-• How precise does the interactivity need to be? Are you tracking large motions or small ones?
-• How big is the space you're trying to track people in? Where is the "active" area?
-• How will you run a cable from the camera to your computer? Will cable length be an issue?
-• Does the camera have settings that you can manually control or will it adjust itself automatically?
-• Do you need a high quality image, or just something low resolution for tracking?
-• Is there a lot of movement in the space or in the background, and how will you control for that?
+ - Where is it being set up?
+- Will it be outside or in the presence of direct sunlight?
+- What is the lighting control like in the space? Does it change throughout the day?
+- How precise does the interactivity need to be? Are you tracking large motions or small ones?
+- How big is the space you're trying to track people in? Where is the "active" area?
+- How will you run a cable from the camera to your computer? Will cable length be an issue?
+- Does the camera have settings that you can manually control or will it adjust itself automatically?
+- Do you need a high quality image, or just something low resolution for tracking?
+- Is there a lot of movement in the space or in the background, and how will you control for that?
 
 Let's start with the most basic and accessible options for most people working with interactive installations for the first time:
 
 ----------------
-<h2>1. The Basic Webcam - RGB</h2>
+##1. The Basic Webcam - RGB
 ![BasicWebcam](images/webcam.jpg)
 
 <small>(<a href="http://www.flickr.com/photos/designios/2066516480/" target="_blank">image source</a>)</small>
@@ -87,7 +87,7 @@ Check out <a href="http://webcam-osx.sourceforge.net/">Macam</a> for additional 
 Be warned, due to some shifts in how Quicktime is handled in OSX (QT_kit-&gt; AV Foundation), some of these camera tools may be broken in 10.9 whenever it comes around.
 
 --------------------
-<h2>2. Other RGB cameras</h2>
+##2. Other RGB cameras
 ![otherrgb](images/red.jpg)
 
 <small>(<a href="http://www.brainfarmcinema.com/red.aspx" target="_blank">image source</a>)</small>
@@ -114,7 +114,7 @@ You're sometimes limited by the capture device and its support on your intended 
 <a href="http://frieder-weiss.de/eyecon/equipment.html">Frieder Weiss's writeup on using digital versus analog cameras and the latency issues involved</a> - 2008)
 
 --------------
-<h2>3. Infrared Cameras</h2>
+##3. Infrared Cameras
 ![infraredimage](images/infrared.jpg)
 
 These are really an essential tool for anyone working with interactive installations. Our visible light goes from 400-700nm, but certain cameras have the ability to see from 700-1000nm. This allows you to hide tracking lights (IR LED's or IR floodlights) and do other tracking of things not visible to the human eye.
@@ -164,7 +164,7 @@ Cheap Infrared CCTV cams work well, but you'll need a capture device
 The Sony M183 or M383 are classic low latency cams used for IR sensing, but are now discontinued, but check eBay.
 
 ---------------
-<h2>4. Depth Cameras</h2>
+##4. Depth Cameras
 ![depthimage](images/depth.jpg)
 
 (<a href="http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html" target="_blank">image source</a>)
@@ -209,7 +209,7 @@ LIDAR/Structured light was used to get the massive scans of the spaces in this R
 If you're just looking for stereo vision capture that can infer depth info, check out the <a href="http://www.ptgrey.com/products/bumblebee2/bumblebee2_stereo_camera.asp&gt; Point Grey Bumblebee &lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=">Readings on structured light and how it works</a>
 
 --
-<h2>5. Thermal Cameras</h2>
+##5. Thermal Cameras
 ![thermalimage](images/thermal.jpg)
 
 <small>(<a href="http://www.humintell.com/2011/09/truthfulness-detection/thermal/" target="_blank">image source</a>)</small>
@@ -257,7 +257,7 @@ Check out this guy doing some random demos with a thermal camera:
 
 <a href="http://www.dbpharrison.com/tag/thermitrack/">Thermitrack usage</a>
 
-<strong>6. Experimental technologies</strong>
+##6. Experimental technologies
 
 These are cameras that haven't really reached the public market yet, or just haven't had the chance to be explored for interactive installations. This category can also include less conventional means of getting an image or tracking objects, or other tools that can be effected by visible light in the space (for example, the <a href="https://www.leapmotion.com/">Leap Motion</a> controller can be thrown off by excessive amounts of IR light). There are also light field cameras, like the <a href="https://www.lytro.com/">Lytro</a>, that are able to get a different kind of information for shooting a scene than a normal CMOS detector can get. Some of these technologies are either brand new or too expensive or not accessible by most so they don't get a lot of use in interactive installations (yet) but it's only a matter of time for several of them.
 
