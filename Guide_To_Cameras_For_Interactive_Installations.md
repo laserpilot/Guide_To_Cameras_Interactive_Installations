@@ -36,28 +36,28 @@ Let's start with the most basic and accessible options for most people working w
 
 <strong>Max resolution range (typical):</strong> Ranges wildly, but you usually will stick to  around 640 x 480 @30fps. Some cameras boast 1080p, but check the framerate! USB 2 often does not have enough bandwidth to send 30fps worth of 1080p frames without some serious frame blur artifacts and slowness. 720p is occasionally more achievable but sometimes at around 15-20fps, and some cameras like the Logitech C920 will claim to do their own camera-side compression to get the images through the pipe a little faster.
 
-<strong>-Webcam Pros:</strong>
+<strong>Webcam Pros:</strong>
 
-• Cheap! -  best widely available ones I've seen are around $80 bucks, but can get them for as low as $5 or $10 at this point
-• Easy to find
-• Reliable - leave them on for months (not always though!)
-• Full color image - they can see just about everything you can. Some can see some IR wavelengths. Rarely will you actually need the color image since most commonly used CV algorithms at the moment use monochrome images.
-• Widely supported by just about any software environment, and well understood.
-• They can see projection and content on screens. Essentially they see a less dynamic/contrasty version of what you see with your own eyes.
+- Cheap! -  best widely available ones I've seen are around $80 bucks, but can get them for as low as $5 or $10 at this point
+- Easy to find
+- Reliable - leave them on for months (not always though!)
+- Full color image - they can see just about everything you can. Some can see some IR wavelengths. Rarely will you actually need the color image since most commonly used CV algorithms at the moment use monochrome images.
+- Widely supported by just about any software environment, and well understood.
+- They can see projection and content on screens. Essentially they see a less dynamic/contrasty version of what you see with your own eyes.
 
-<strong>-Webcam Cons:</strong>
+<strong>Webcam Cons:</strong>
 
-• They can see projection and content on screens.
-• Some brands will have really poor image quality, especially in low light.
-• Excessive image noise can severely impact tracking algorithms, especially in low light.
-• Rarely do you get to manually change the settings of the camera itself without some software investigation.
-• Typically a fixed lens (no zooming or manual focus)
-• Sensitive to changes in daylight/natural light
-• Requires fairly sophisticated computer vision algorithms to extract really meaningful information from these cameras - no skeleton tracking or easy depth information
-• USB cable lengths can be limiting if you need to be extremely far away from your processing computer. Plan for extenders/repeaters if going much over 30ft (10m) away
-• Latency can sometimes be an issue with these. Not too much, but enough to feel just a little bit behind real life. Analog is a little bit faster in regard to processing the image. Also most of them, aside from the PSEye tend to max out at 30fps, and 60fps is really recommended for a lower feeling of latency and high tracking accuracy.
-• Some cameras have weird methods of autofocus that can really screw up your imagery. I've used a few that were nice HD cams, but the slow hunting autofocus made them a deal breaker.
-• Try leaving your camera on for an extended period of time. I've seen issues with inexplicable strange coloring, and just non-responsiveness after being left on for a long time with certain brands.
+- They can see projection and content on screens.
+- Some brands will have really poor image quality, especially in low light.
+- Excessive image noise can severely impact tracking algorithms, especially in low light.
+- Rarely do you get to manually change the settings of the camera itself without some software investigation.
+- Typically a fixed lens (no zooming or manual focus)
+- Sensitive to changes in daylight/natural light
+- Requires fairly sophisticated computer vision algorithms to extract really meaningful information from these cameras - no skeleton tracking or easy depth information
+- USB cable lengths can be limiting if you need to be extremely far away from your processing computer. Plan for extenders/repeaters if going much over 30ft (10m) away
+- Latency can sometimes be an issue with these. Not too much, but enough to feel just a little bit behind real life. Analog is a little bit faster in regard to processing the image. Also most of them, aside from the PSEye tend to max out at 30fps, and 60fps is really recommended for a lower feeling of latency and high tracking accuracy.
+- Some cameras have weird methods of autofocus that can really screw up your imagery. I've used a few that were nice HD cams, but the slow hunting autofocus made them a deal breaker.
+- Try leaving your camera on for an extended period of time. I've seen issues with inexplicable strange coloring, and just non-responsiveness after being left on for a long time with certain brands.
 
 <strong>-Range of effectiveness:</strong> Varies by placement. Could watch an entire room of people, but with very little precision. Seems to work best in a range of about 1ft-50ft (.3-16m). If you're too far back, it can be difficult to get an accurate  or meaningful reading because the people will be too small to the sensor in relation to other image noise. Can be fine if they are on a fairly plain background though.
 
@@ -133,18 +133,18 @@ When choosing these higher end cameras, also make note of their sensor size. A l
 
 <strong>Infrared Pros:</strong>
 
-• They cannot see images that are projected or on a screen (some can see content on screens...depends on screen type). IR and projection are a really nice interactive match, but you tend to need a dark space to pull these off. Are you also tired of being relegated to a dark windowless room with these tools?
-• Can be used in dark spaces when used with IR emitters.
-• Since they can see what the human eye can't, they are most useful for hiding certain elements like lights used for tracking points or illuminating a space.
-• Tracking a point of IR light is an incredibly effective and robust tracking method because you can have a bright point of light that is invisible to the human eye.
-• Good for tracking a large area like a stage flooded with IR.
+- They cannot see images that are projected or on a screen (some can see content on screens...depends on screen type). IR and projection are a really nice interactive match, but you tend to need a dark space to pull these off. Are you also tired of being relegated to a dark windowless room with these tools?
+- Can be used in dark spaces when used with IR emitters.
+- Since they can see what the human eye can't, they are most useful for hiding certain elements like lights used for tracking points or illuminating a space.
+- Tracking a point of IR light is an incredibly effective and robust tracking method because you can have a bright point of light that is invisible to the human eye.
+- Good for tracking a large area like a stage flooded with IR.
 
 <strong>Infrared Cons:</strong>
 
-• Monochrome
-• They require a healthy source of infrared light. Don't assume the lights inside will provide the type of light these cameras need to see effectively. You may need IR emitters to properly illuminate the space. People wont be able to see the extra light, but the camera will.
-• Sensitive to sunlight and certain stage lights. Some stage lights will be bright enough to throw off tracking on an IR camera because the range of the light and camera overlap enough. There may be problems that the camera can see that you might not have seen with your eyes, so it can be useful to know the complete light profile of a room or to just go there with a camera beforehand.
-• Certain clothes and materials look different in IR than in visible light. Can have weird effects sometimes.
+- Monochrome
+- They require a healthy source of infrared light. Don't assume the lights inside will provide the type of light these cameras need to see effectively. You may need IR emitters to properly illuminate the space. People wont be able to see the extra light, but the camera will.
+- Sensitive to sunlight and certain stage lights. Some stage lights will be bright enough to throw off tracking on an IR camera because the range of the light and camera overlap enough. There may be problems that the camera can see that you might not have seen with your eyes, so it can be useful to know the complete light profile of a room or to just go there with a camera beforehand.
+- Certain clothes and materials look different in IR than in visible light. Can have weird effects sometimes.
 
 <strong>Optimal environment for round the clock reliability</strong>
 
@@ -185,18 +185,18 @@ There are also other methods of obtaining the same information with a high frame
 
 <strong>Depth Camera Pros:</strong>
 
-• Depth images give you the option of really amazing background subtraction because you can totally ignore everything beyond about 10ft (with a Kinect).
-• Processed depth images give you a lot of great tracking information like hand skeleton, body skeleton, shape normals. You can build 3D models of rooms or objects. You can do fairly high quality body and facial motion capture for use in 3D rendering programs.
-• Isn't affected by light from a projector. A lot of the same good qualities as standard IR, but they should only be used if you <em>need</em> depth information...they are not preferred over regular IR. Again, do your best to choose right tool for the job.
+- Depth images give you the option of really amazing background subtraction because you can totally ignore everything beyond about 10ft (with a Kinect).
+- Processed depth images give you a lot of great tracking information like hand skeleton, body skeleton, shape normals. You can build 3D models of rooms or objects. You can do fairly high quality body and facial motion capture for use in 3D rendering programs.
+- Isn't affected by light from a projector. A lot of the same good qualities as standard IR, but they should only be used if you <em>need</em> depth information...they are not preferred over regular IR. Again, do your best to choose right tool for the job.
 
 <strong>Depth Camera Cons:</strong>
 
-• Because of the use of IR, these cameras will also be sensitive to changes in sunlight.
-• Do not rely on depth cameras if you need a sharp, clean outline of your subject. You will get jagged artifacts that will need to be blurred or processed to get smooth lines.
-• Structured light cameras aren't able to work at an incredibly close range (ie right in front of them). Time of flight cameras are a little more robust in this regard, and are better if you need to use them really close up.
-• Certain surfaces will interfere with the ability to produce a good depth image. Shiny surfaces will effectively be invisible or cause strange reflection artifacts in your image.
-• Using multiple systems together occasionally requires special consideration. Overlapping structured light from the Kinect (if they are right next to each other) can cause double images to appear due to the extra light grid. If the Kinects are more perpendicular to each other, this negative effect is less likely. You can also use this trick: attach a vibrating motor to one Kinect to make the other sensor's dots blur, and the vibrating sensor's own dots will stay in focus.
-• Fairly limited effective range.
+- Because of the use of IR, these cameras will also be sensitive to changes in sunlight.
+- Do not rely on depth cameras if you need a sharp, clean outline of your subject. You will get jagged artifacts that will need to be blurred or processed to get smooth lines.
+- Structured light cameras aren't able to work at an incredibly close range (ie right in front of them). Time of flight cameras are a little more robust in this regard, and are better if you need to use them really close up.
+- Certain surfaces will interfere with the ability to produce a good depth image. Shiny surfaces will effectively be invisible or cause strange reflection artifacts in your image.
+- Using multiple systems together occasionally requires special consideration. Overlapping structured light from the Kinect (if they are right next to each other) can cause double images to appear due to the extra light grid. If the Kinects are more perpendicular to each other, this negative effect is less likely. You can also use this trick: attach a vibrating motor to one Kinect to make the other sensor's dots blur, and the vibrating sensor's own dots will stay in focus.
+- Fairly limited effective range.
 
 <strong>Depth Image Examples:</strong>
 
@@ -232,24 +232,24 @@ Check out this guy doing some random demos with a thermal camera:
 
 <strong>Thermal Camera Pros:</strong>
 
-• Normal visible light doesn't have much of an effect on a thermal camera.
-• Good for tracking a large area like a stage.
-• Gives you the ability to more definitely identify people because of their heat signature...whereas other objects and materials may not show up at all if they are warmer.
-• Fairly robust for daytime to night time interaction because people will be the same temperature and appear in the proper dynamic range.
-• Give you the ability to track invisible phenomena like hot air from breath, or residual heat from something like a hand leaving a warm mark on a surface, or a cold blast of water hitting a warm surface.
-• Can see through certain materials and walls.
-• Thermal cameras can see through certain kinds of clothing.
+- Normal visible light doesn't have much of an effect on a thermal camera.
+- Good for tracking a large area like a stage.
+- Gives you the ability to more definitely identify people because of their heat signature...whereas other objects and materials may not show up at all if they are warmer.
+- Fairly robust for daytime to night time interaction because people will be the same temperature and appear in the proper dynamic range.
+- Give you the ability to track invisible phenomena like hot air from breath, or residual heat from something like a hand leaving a warm mark on a surface, or a cold blast of water hitting a warm surface.
+- Can see through certain materials and walls.
+- Thermal cameras can see through certain kinds of clothing.
 
 <strong>Thermal Camera Cons:</strong>
 
-• As these are occasionally considered military grade equipment, there may be export restrictions, so be wary when planning on traveling abroad.
-• Expensive
-• Difficult to integrate - require either custom electronics or capture hardware
-• Thermal cameras can see through certain kinds of clothing.
-• Not all lights are invisible to thermal cameras...if it's producing heat or radiating it, the camera will see it.
-• Thermal imaging sometimes results in ghosting of movement due to the sensor method.
-• They are unable to see through windows/glass because the range of radiation ends up being reflected before it transmits through the glass to the camera. <a href="http://answers.yahoo.com/question/index?qid=20081001100003AAH2Ouo">See here for a more involved explanation of why</a>.
-• Certain hot materials may result in unforeseen difficulties with using thermal imaging in certain environments. Requires a different type of thinking in order to anticipate things that will be overly hot or cold in the space of the installation.
+- As these are occasionally considered military grade equipment, there may be export restrictions, so be wary when planning on traveling abroad.
+- Expensive
+- Difficult to integrate - require either custom electronics or capture hardware
+- Thermal cameras can see through certain kinds of clothing.
+- Not all lights are invisible to thermal cameras...if it's producing heat or radiating it, the camera will see it.
+- Thermal imaging sometimes results in ghosting of movement due to the sensor method.
+- They are unable to see through windows/glass because the range of radiation ends up being reflected before it transmits through the glass to the camera. <a href="http://answers.yahoo.com/question/index?qid=20081001100003AAH2Ouo">See here for a more involved explanation of why</a>.
+- Certain hot materials may result in unforeseen difficulties with using thermal imaging in certain environments. Requires a different type of thinking in order to anticipate things that will be overly hot or cold in the space of the installation.
 
 <strong> Further reading:</strong>
 
