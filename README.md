@@ -5,6 +5,7 @@
 
 To-do for 2020 Update:
 
+- Clean up language and links
 - Update references to various camera technologies in all categories
 - Reference different connection protocols now available (HDMI Capture, NDI, IP Cameras, GigE)
 - Webcam update technologies (Logitech Brio)
@@ -18,15 +19,15 @@ To-do for 2020 Update:
 
 -------------------
 
-Preface:
+**Preface:**
 
-I published this guide in 2013 on [Creative Applications](http://creativeapplications.net) and moved it to Github in 2016. Camera technologies have obviously changed a lot in the 7 years since I published, so it is certainly time for a major update.
+I published this guide in 2013 on [Creative Applications](http://creativeapplications.net) and moved it to Github in 2016. I don't think the Kinect 2 was out at the time, and it has since come and gone. Camera technologies have obviously changed a lot in the 7 years since I published, so it is certainly time for a major update. The 2013 version is being kept in the repo for historical reference.
 
 -------------------
 
-Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in your  initial planning phases. Making the incorrect choice can really impact how well your installation reacts to its victims and it can also impact its ability to perform robustly in a large amount of environments. You can always correct for certain things in software, but the hardware setup can often be the first line of defense against undesired behavior.
+Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in the initial planning phases of your project. Making the incorrect choice can really impact how well your installation reacts to its visitors. This choice can also affect the installation's ability to perform robustly in a large amount of environments. You can always correct for certain things in software, but the hardware setup can often be the first line of defense against undesired behavior.
 
-Whether you're working in Processing, Touch Designer,OpenFrameworks, <a href="http://www.creativeapplications.net/category/cinder/">Cinder</a>, <a href="http://www.creativeapplications.net/category/vvvv/">VVVV</a>, or really any artistically geared programming environment, your choice of camera can impact your work no matter the software. Some environments will give you more options with different cameras (maybe you need a Blackmagic capture card, or an IP cam, or a DSLR, or a Point Grey Firefly). Some environments won't have support for certain kinds of cameras, so do some checking before you think you can just plug your DSLR straight into Quartz Composer and expect it to be recognized. If the tool doesn't exist to port it in, there are a lot of technologies to do routing between applications (see <a href="http://camtwiststudio.com/">CamTwist</a> and <a href="http://syphon.v002.info/">Syphon</a> for OS X ), so you may have some luck there.
+Whether you're working in  Touch Designer, Python, Unity, Web technologies, Processing, OpenFrameworks, Cinder, MaxMSP/Jitter, or really any artistically geared programming environment, your choice of camera can impact your work no matter the software. Many software environments just work off the shelf with various cameras and input types, but some more exotic cameras can be tricky so make sure you do your research before making a big purchase. If the tool doesn't exist to port it in, there are a lot of technologies to do routing between applications (see <a href="http://camtwiststudio.com/">CamTwist</a> and <a href="http://syphon.v002.info/">Syphon</a> for OS X ), so you may have some luck there.
 
 Each type of imager typically has some amazing strengths and some really hindering downfalls, so it's important to keep these kinds of questions in mind when planning your installation. For beginners, don't expect that because it works in your workspace, it'll work on the classroom or gallery floor...if at all possible, test it early!
 
