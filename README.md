@@ -13,9 +13,8 @@ To-do for 2020 Update:
 - Major depth camera update (Kinect Azure, Orbbec, Realsense, include [Stimulant Depth camera shootout link](https://stimulant.com/depth-sensor-shootout-2/), [GigE Realsense](https://imaging.framos.com/cpc/en/d435e/?keyword=Realsense+GigE+Camera&gclid=EAIaIQobChMIsqmywIPU5wIViJOzCh2NZQYsEAAYASAAEgIg7fD_BwE)
 - Thermal camera update (portable cams, USB, cheaper)
 - High Speed cameras (Edgertronic)
-- Others? (Leap Motion, 
-- Experimental/other things to consider as cameras / "observational tracking devices"
-
+- Others? (Leap Motion, GoPro, motion capture systems, things like Blacktrak(https://blacktrax.cast-soft.com)), other things to consider as cameras or "observational tracking devices"
+- Experimental
 
 -------------------
 
@@ -25,23 +24,24 @@ I published this guide in 2013 on [Creative Applications](http://creativeapplica
 
 -------------------
 
-Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in the initial planning phases of your project. Making the incorrect choice can really impact how well your installation reacts to its visitors. This choice can also affect the installation's ability to perform robustly in a large amount of environments. You can always correct for certain things in software, but the hardware setup can often be the first line of defense against undesired behavior.
+If your work involves interactive installations, there's a good chance you'll be working with a camera at some point. Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in the initial planning phases of your project. Making the incorrect choice can really impact how well your installation reacts to its visitors. This choice can also affect the installation's ability to perform robustly in a variety of environments. You can always correct for certain things in software, but the hardware setup can often be the first line of defense against undesired behavior.
 
-Whether you're working in  Touch Designer, Python, Unity, Web technologies, Processing, OpenFrameworks, Cinder, MaxMSP/Jitter, or really any artistically geared programming environment, your choice of camera can impact your work no matter the software. Many software environments just work off the shelf with various cameras and input types, but some more exotic cameras can be tricky so make sure you do your research before making a big purchase. If the tool doesn't exist to port it in, there are a lot of technologies to do routing between applications (see <a href="http://camtwiststudio.com/">CamTwist</a> and <a href="http://syphon.v002.info/">Syphon</a> for OS X ), so you may have some luck there.
+Another important thing to keep in mind is that while many artistically geared software environments do work off the shelf with various cameras and input types, some more exotic cameras can be tricky to work with. Make sure you do your research before making a big purchase. If the tool doesn't exist to port it in, there are a few technologies that can route video between applications or even over the network. The most common tools are [Syphon](http://syphon.v002.info) for macOS and [Spout](https://spout.zeal.co) for Windows
 
-Each type of imager typically has some amazing strengths and some really hindering downfalls, so it's important to keep these kinds of questions in mind when planning your installation. For beginners, don't expect that because it works in your workspace, it'll work on the classroom or gallery floor...if at all possible, test it early!
+In the sections below, I will cover some of the most common camera types that are used for interactive installations. Before we dive in, it can be important to consider the following questions when considering which camera best suits your use case.
 
-<strong>Questions to consider when in planning phases:</strong>
+**Questions to consider when in planning phases:**
 
- - Where is it being set up?
-- Will it be outside or in the presence of direct sunlight?
+- Where is it being set up? Does it need to be hidden?
+- Will it be outside and exposed to the elements or in the presence of direct sunlight?
 - What is the lighting control like in the space? Does it change throughout the day?
 - How precise does the interactivity need to be? Are you tracking large motions or small ones?
 - How big is the space you're trying to track people in? Where is the "active" area?
 - How will you run a cable from the camera to your computer? Will cable length be an issue?
-- Does the camera have settings that you can manually control or will it adjust itself automatically?
-- Do you need a high quality image, or just something low resolution for tracking?
-- Is there a lot of movement in the space or in the background, and how will you control for that?
+- Is your software compatible with your choice of camera?
+- Does the camera have settings that you can manually control or will it adjust itself automatically? If you need to control the settings automatically, does the camera allow for that?
+- Do you need a high quality live feed image that the visitor will see, or can you get by with low resolution for tracking purposes?
+- Is there a lot of movement in the space or in the background? How will you control for that?
 
 Let's start with the most basic and accessible options for most people working with interactive installations for the first time:
 
@@ -49,11 +49,13 @@ Let's start with the most basic and accessible options for most people working w
 ##1. The Basic Webcam - RGB
 ![BasicWebcam](images/webcam.jpg)
 
-<small>(<a href="http://www.flickr.com/photos/designios/2066516480/" target="_blank">image source</a>)</small>
+[image source](http://www.flickr.com/photos/designios/2066516480/)
 
-<strong>Connection types:</strong> <a href="http://www.amazon.co.uk/s/?_encoding=UTF8&amp;camp=1634&amp;creative=19450&amp;h=ddc4dfb3cdcf26a1e9d2633324930abe62600a14&amp;keywords=usb%202%20webcam&amp;linkCode=ur2&amp;qid=1361309657&amp;rh=n%3A430595031%2Ck%3Ausb%202%20webcam&amp;scn=430595031&amp;tag=creativenet-21" target="_blank">USB 2</a> (Standard), <a href="http://www.amazon.co.uk/s/?_encoding=UTF8&amp;camp=1634&amp;creative=19450&amp;field-keywords=usb%203%20webcam&amp;linkCode=ur2&amp;rh=n%3A430595031%2Ck%3Ausb%203%20webcam&amp;tag=creativenet-21" target="_blank">USB 3.0</a> (not many of these, yet), <a href="http://www.amazon.co.uk/s/?_encoding=UTF8&amp;camp=1634&amp;creative=19450&amp;field-keywords=firewire%20webcam&amp;linkCode=ur2&amp;rh=n%3A340831031%2Cn%3A!340832031%2Cn%3A429893031%2Cn%3A430595031%2Ck%3Afirewire%20webcam&amp;tag=creativenet-21&amp;url=node%3D430595031" target="_blank">Firewire</a> (rare - old iSight was one of these)
+Webcams are still great for basic applications and workspace testing, but are only occaisionally used for professional installations. Now that high quality cameras are built into almost every laptop and smartphone, the market for standalone webcams has largely stagnated since the mid 2010's. There are only a handful of decent options in this space and there doesn't seem to be a lot of choice or competition that will shake up the market anytime soon. A lot of the cameras are really made for Streamers and boast features for things like built-in AI face detection for autofocus (something that you may or may not even be able to use in your software). At this point, the [Logitech Brio 4K](https://www.logitech.com/en-us/product/brio) is probably the best option and even that camera is almost 4 years old. Logitech is basically the only name brand in the game at this point, other than a random mix of Chinese manufacturers.
 
-<strong>Max resolution range (typical):</strong> Ranges wildly, but you usually will stick to  around 640 x 480 @30fps. Some cameras boast 1080p, but check the framerate! USB 2 often does not have enough bandwidth to send 30fps worth of 1080p frames without some serious frame blur artifacts and slowness. 720p is occasionally more achievable but sometimes at around 15-20fps, and some cameras like the Logitech C920 will claim to do their own camera-side compression to get the images through the pipe a little faster.
+**Connection types:** USB 3.0 and USB C is most common, but still some USB 2.0 connections out there
+
+**Max resolution range (typical):** Ranges wildly, and it depends on your application. There are only a handful of 4k webcams out there, but there are a lot more 720p60fps cameras on the market these days due to the adoption of USB 3.0. If you're working with an older camera, USB 2 often does not have enough bandwidth to send 30fps worth of 1080p without some artifacts. Some web cameras are also guilty of doing some software compression of the image before sending it through the connection and this can add some image degradation.
 
 <strong>Webcam Pros:</strong>
 
