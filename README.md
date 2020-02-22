@@ -1,4 +1,4 @@
-#Guide to Cameras for Interactive Installations
+# Guide to Cameras for Interactive Installations
 
 
 #### Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2020
