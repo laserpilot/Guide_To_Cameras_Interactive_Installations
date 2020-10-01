@@ -41,6 +41,7 @@ Major changes to this since 2013 are that a lot of technologies have come out, H
 
 -------------------
 
+**Introduction**
 If your work involves interactive installations, there's a good chance you'll be working with a camera at some point. Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in the initial planning phases of your project. You can always correct for certain things in software, but your hardware and camera choices are the first line of defense against undesired behavior. 
 
 In the sections below, I will cover several topics including common and uncommon camera types that are used for interactive installations, and their strengths and weaknesses. Here is an outline of what is covered:
@@ -67,7 +68,7 @@ In the sections below, I will cover several topics including common and uncommon
  - Brief software discussions
  - Other References and Acknowledgments
 
-##Questions to consider when in planning phases:
+## Questions to consider when in planning phases:
 
 Before we dive in, consider the following questions when considering which camera best suits your use case. You don't need an answer for everything, but having an idea for many of these will help determine the strengths and weaknesses of various technologies and help narrow down your list.
 
@@ -91,7 +92,7 @@ Before we dive in, consider the following questions when considering which camer
 
 
 ----------------
-##1. The Basic Webcam - RGB
+## 1. The Basic Webcam - RGB
 ![BasicWebcam](images/webcam.jpg)
 
 [image source](http://www.flickr.com/photos/designios/2066516480/)
@@ -158,7 +159,7 @@ Check out the differences between a UVC cam and a non UVC cam to get an idea abo
 
 
 --------------------
-##2. Other RGB cameras
+## 2. Other RGB cameras
 ![otherrgb](images/red.jpg)
 
 ###### [Image source](http://www.brainfarmcinema.com/red.aspx)
@@ -184,7 +185,7 @@ You're sometimes limited by the capture device and its support on your intended 
 <a href="http://frieder-weiss.de/eyecon/equipment.html">Frieder Weiss's writeup on using digital versus analog cameras and the latency issues involved</a> - 2008)
 
 --------------
-##3. Infrared Cameras
+## 3. Infrared Cameras
 ![infraredimage](images/infrared.jpg)
 
 These are really an essential tool for anyone working with interactive installations. Our visible light goes from 400-700nm, but certain cameras have the ability to see from 700-1000nm. This allows you to hide tracking lights (IR LED's or IR floodlights) and do other tracking of things not visible to the human eye.
@@ -234,7 +235,7 @@ Cheap Infrared CCTV cams work well, but you'll need a capture device
 The Sony M183 or M383 are classic low latency cams used for IR sensing, but are now discontinued, but check eBay.
 
 ---------------
-##4. Depth Cameras
+## 4. Depth Cameras
 ![depthimage](images/depth.jpg)
 
 (<a href="http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html" target="_blank">image source</a>)
@@ -279,7 +280,7 @@ LIDAR/Structured light was used to get the massive scans of the spaces in this R
 If you're just looking for stereo vision capture that can infer depth info, check out the <a href="http://www.ptgrey.com/products/bumblebee2/bumblebee2_stereo_camera.asp&gt; Point Grey Bumblebee &lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=">Readings on structured light and how it works</a>
 
 --
-##5. Thermal Cameras
+## 5. Thermal Cameras
 ![thermalimage](images/thermal.jpg)
 
 <small>(<a href="http://www.humintell.com/2011/09/truthfulness-detection/thermal/" target="_blank">image source</a>)</small>
@@ -327,7 +328,7 @@ Check out this guy doing some random demos with a thermal camera:
 
 [Thermitrack](http://www.dbpharrison.com/tag/thermitrack/)
 
-##7. High End Machine Vision Cameras
+## 7. High End Machine Vision Cameras
 These cameras are typically employed in industries like manufacturing that require a high degree of stability and performance for performing computer vision tasks. 
 
 One example would be the use of cameras and specialized software to monitor a fast moving automated assembly line and using the visual data to ensure every product looks correct. They can also be employed for things like processing produce - sorting ripe tomatoes from green tomatoes at very high speeds.
@@ -339,7 +340,7 @@ This area of cameras is incredibly complex and we won't go into all of the speci
 [Allied Vision](https://www.alliedvision.com/en/digital-industrial-camera-solutions.html)
 
 
-##8. High-speed or Slow Motion Cameras
+## 8. High-speed or Slow Motion Cameras
 
 [High-speed Cameras](https://en.wikipedia.org/wiki/High-speed_camera) are a special class of cameras that can capture 250 frames per second or higher, even up to 250,000fps to several million fps in some cases. If the high-end machine vision cameras above are for real-time processing, I'm thinking of high-speed cameras more for offline recording and viewing - a slightly different workflow. High-speed cameras are fairly uncommon in interactive installations because the (current) limitations of physics mean you can't watch reality in real time and slow motion reality at the same time. Years ago, getting cameras that could capture higher than 60fps were fairly specialized and uncommon, especially for the consumer market. Now almost every flagship smartphone can record 120-240fps and sometimes even higher in burst modes. Some standard webcams can also get up to 120fps. The primary market for professional high speed cameras is for industrial purposes, like the high end machine vision cameras covered above, or for the film industry. Since these applications are fairly niche and low demand, these cameras tend to be incredibly expensive - ranging from around $500USD on the low end to $30,000USD to $50k+ on the high end.
 
@@ -352,7 +353,7 @@ Since high-speed cameras are really just great at pushing a lot of data through 
 Noteable high speed camera manufacturers are [Phantom cameras from Vision Research](https://www.phantomhighspeed.com), [Photron cameras](https://photron.com), and [iX cameras](https://www.ix-cameras.com), but their cameras can typically cost more than most interactive installation budgets can manage. Rental is often an option as well. The main issue you may run into with these cameras is actually interfacing with them. Because of their high cost and low usage in the interactive space, there often isnt a lot of prior knowledge out there about working with them and you need to have a camera before you can get documentation about their API's and such. Around 2014, [Edgertronic](https://edgertronic.com) entered the high-speed scene with their more affordable high-speed cameras. Edgertronic cameras are basically a specialized FPGA with a Linux computer for additional processing and control. I used several of these on an installation in 2014 for capturing footage of participants at 720p and 400fps and they performed fairly well and were easy to interface with via standard http requests and a browser interface. Several models have come out since then with various improvements. Most other cameras out there also interface via a network connection to some proprietary control software.
 
 
-##9.  Wireless cameras
+## 9.  Wireless cameras
 
 Wireless is a bit of a misnomer since almost any camera can be made wireless these days, and obviously even smartphone cameras count as a wireless camera. Smartphone cameras can be sent to desktop computers via various streaming apps. GoPro cameras are another classic consumer wireless camera. The primary application is for film shoots (monitoring, recording backups, etc) and specialized uses like mounting to a flying drone or other temporary applications.
 
@@ -363,32 +364,32 @@ Professional Wireless camera interfaces to investigate include:
 - [Paralinx](https://www.paralinx.net)
 - [Vaxis](https://vaxis.us)
 
-##10. Motion capture systems
+## 10. Motion capture systems
 These could have their own article and I have limited experience with them, but they are worth adding to the list for completeness.
 
-##11. Other cameras and systems (robotic/Moving and other observational tracking devices, Security Cameras)
+## 11. Other cameras and systems (robotic/Moving and other observational tracking devices, Security Cameras)
 
 [Freefly](https://freeflysystems.com)
 
-##12. Older Camera/Video Technologies (Analog, Old RCA Cams)
+## 12. Older Camera/Video Technologies (Analog, Old RCA Cams)
 
-##13. Experimental technologies
+## 13. Experimental technologies
 
 
 
-##Camera interfaces (USB 2 and 3, HDMI, NDI, IP, GigE)
+## Camera interfaces (USB 2 and 3, HDMI, NDI, IP, GigE)
 Another important thing to keep in mind is that while many artistically geared software environments do work off-the-shelf with various cameras and input types (typically with [UVC](https://en.wikipedia.org/wiki/USB_video_device_class), more exotic cameras aren't always plug and play. Make sure you do your research before making a big purchase. If the tool doesn't exist to pull in a video feed, there are a few technologies that can route video between applications or even over the network. The most common tools are [Syphon](http://syphon.v002.info) for macOS and [Spout](https://spout.zeal.co) for Windows, but there are other options out there as well.
 
-##Outdoor considerations
+## Outdoor considerations
 
-##Notes on Latency
+## Notes on Latency
 
-##Notes on Lenses
+## Notes on Lenses
 
-##Image touch-up and Noise
+## Image touch-up and Noise
 Low light, De-noising, upscaling
 
-##References and Acknowledgments
+## References and Acknowledgments
 
 [Advantage of monochrome cameras for accuracy over color images](https://maxmax.com/faq/camera-tech/debayer-study)
 [How to Measure the latency of your webcam with openCV](https://www.dlology.com/blog/how-to-measure-the-latency-of-a-webcam-with-opencv/)
@@ -396,5 +397,5 @@ Low light, De-noising, upscaling
 [Netv2 video capture and overlay device](https://www.adafruit.com/product/4248)
 [DepthKit](https://www.depthkit.tv)
 
-Huge thanks to Elliot Woods for a ton of thoughtful suggestions on how to expand  the guide from its 2013 version. [Kyle McDonald](http://kylemcdonald.net), [Theo Watson](http://theowatson.com/), <a href="http://thesystemis.com/">Zach Lieberman</a> and <a href="http://www.flong.com/">Golan Levin</a> for some great additional tips to help round out some of the suggestions here.
+Huge thanks to [Elliot Woods](http://elliotwoods.info) for a ton of thoughtful suggestions on how to expand  the guide from its 2013 version. [Kyle McDonald](http://kylemcdonald.net), [Theo Watson](http://theowatson.com/), <a href="http://thesystemis.com/">Zach Lieberman</a> and <a href="http://www.flong.com/">Golan Levin</a> for some great additional tips to help round out some of the suggestions here.
 
