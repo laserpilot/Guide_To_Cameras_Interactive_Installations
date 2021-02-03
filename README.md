@@ -1,35 +1,7 @@
 # Guide to Cameras for Interactive Installations
 
 
-#### Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2020 (update in progress)
-
-[GOOGLE DOC FOR CAMERAS](https://docs.google.com/spreadsheets/d/1zM1VhLzEeqW-6vP7xw6DVx-RA1b90rNA8ZxfCAxu-qw/edit#gid=0)
-
-To-do for 2020 Update:
-
-- Clean up language and links
-- Publish a version to Medium?
-- Update references to various camera technologies in all categories
-- Reference different connection protocols now available or more common (HDMI Capture, NDI, IP Cameras, GigE)
-- Webcam update technologies (Logitech Brio)
-- Other RGB Cameras (PTZ, 4K, DSLR, Broadcast)
-- Major depth camera update (Kinect Azure, Orbbec, Realsense, include [Stimulant Depth camera shootout link](https://stimulant.com/depth-sensor-shootout-2/), [GigE Realsense](https://imaging.framos.com/cpc/en/d435e/?keyword=Realsense+GigE+Camera&gclid=EAIaIQobChMIsqmywIPU5wIViJOzCh2NZQYsEAAYASAAEgIg7fD_BwE)   
-- Thermal camera update (portable cams, USB, cheaper)
-- High Speed cameras (Edgertronic, ix cameras, phantom)
-- Others? (Leap Motion, GoPro, motion capture systems, things like Blacktrak(https://blacktrax.cast-soft.com) ), other things to consider as cameras or "observational tracking devices"
-- Older camera technologies (DVCam, RCA/Analog, "Analog" capture devices, etc)
-- Experimental
-- Wireless/Drone?/Teradek
-- Maybe more general tips outside of specific camera technologies? Suggestions below from Elliot
-- Monochrome advantages
-- USB3 vs GigE
-- Lenses
-- Noise and Noise reduction
-- Machine learning touchup (upscaling, noise reduction, low light)
-- Using a smartphone camera (pros, cons, intgerated sensor data and intrinsics)
-- High end machine vision cams
-
-
+#### Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2021 (update in progress)
 
 -------------------
 
@@ -45,7 +17,9 @@ Major changes to this since 2013 are that a lot of technologies have come out, H
 
 If your work involves interactive installations, there's a good chance you'll be working with a camera at some point. Choosing the right type of camera for your interactive installation is one of the most important technical choices you can make in the initial planning phases of your project. You can always correct for certain things in software, but your hardware and camera choices are the first line of defense against undesired behavior. 
 
-In the sections below, part 1 cover several common camera types and their strengths and weaknesses. Following that, part 2 will cover some less common cameras and other topics like camera systems that use hybrid approaches. Part 3 will cover some supplementary information like camera measurements, latency, and other brief software topics.  Here is an outline of what we'll be covering.
+Drawing a line at what I'm defining as a "camera" is a bit challenging. There is a huge range of options available for observational tracking. In general for this writeup, we can think of a camera as an electronic device with a sensor that is capable of detecting different wavelengths of light that have been focused by a lens. [Here](https://ciechanow.ski/cameras-and-lenses/) is a great guide by Bartosz Ciechanowski on the different physics involved in cameras and lenses.
+
+In the sections below, Part 1 covers several common camera types and their strengths and weaknesses. Following that, Part 2 will cover some less common cameras and other topics like camera systems that use hybrid approaches. Part 3 will cover some supplementary information like camera measurements, latency, and other brief software topics.  Here is an outline of what we'll be covering.
 
 
  - **Part 0 - Questions to consider when choosing a camera**
@@ -53,15 +27,18 @@ In the sections below, part 1 cover several common camera types and their streng
 	 - The Basic RGB Webcam
 	 - Other RGB Cameras
 	 - Infrared Cameras
-	 - Depth and Stereo Cameras
-	 - Thermal Cameras
-	 - High-end machine vision cameras
+	 - Depth Cameras
+	 - LIDAR
  - **Part 2 - The Exotic**
+	 - Thermal Cameras
+	 - High-end Machine Vision Cameras
+	 - Multi-camera and on-board compute systems
 	 - High-speed or Slow Motion Cameras 
-	 - Wireless cameras
-	 - Motion capture systems
+	 - Wireless Cameras
+	 - Motion Capture systems
 	 - Volumetric Capture
-	 - Other cameras and systems (Robotic/Moving and other observational tracking devices)
+	 - 360 Cameras and Filming
+	 - Other Cameras and Systems (Robotic/Moving, and other "observational tracking devices")
 	 - Older Camera/Video Technologies (Analog, Old RCA Cams)
 	 - Experimental Technologies
  - **Part 3 - Supplemental Information**
@@ -69,7 +46,7 @@ In the sections below, part 1 cover several common camera types and their streng
 	 - Outdoor considerations
 	 - Notes on Lenses
 	 - Notes on Latency
-	 - Notes on image touch-up and noise
+	 - Notes on image touch-up and noise reduction
 	 - Brief software discussions
  - Other References and Acknowledgments
 
@@ -98,64 +75,63 @@ Before we dive in, consider the following questions when considering which camer
 
 ----------------
 
-### The Basic Webcam - RGB
+### The Basic Webcam
 ![BasicWebcam](images/webcam.jpg)
 
 [image source](http://www.flickr.com/photos/designios/2066516480/)
 
-Even now, webcams are still great for basic applications and workspace testing, but are only occaisionally used for professional installations. Now that high quality cameras are built into almost every laptop and smartphone, the market for standalone webcams has largely stagnated since the mid 2010's. There are only a handful of decent options in this space and there doesn't seem to be a lot of choice or competition that will shake up the market anytime soon. 
+"Webcam" isn't necessarily an industry term, but if you're reading this, you generally know what we're talking about. Common webcams are those that are built into your laptop, or commercially available external devices connected via USB. There are more specialized USB cameras that we'll cover later on. 
 
-A lot of the cameras available are really made for streamers and boast features for things like built-in AI face detection for autofocus (something that you may or may not even be able to use in your software). At this point, the [Logitech Brio 4K](https://www.logitech.com/en-us/product/brio) is probably the best option, and even that camera came out in 2017. At a quick glance, Logitech is basically the only name brand in the game at this point, other than a random mix of Chinese manufacturers.
+Webcams are great for basic applications and workspace testing, but are only occaisionally used for professional installations these days. Now that high quality cameras are built into almost every laptop, smartphone, and tablet, the market for standalone webcams has largely stagnated since the mid 2010's. There are only a handful of decent options in this space and there doesn't seem to be a lot of choice or competition that will shake up the market anytime soon. 
 
-**Connection types:** USB 3.0 and USB C is most common connection you'll see, but there are still some USB 2.0 connections out there.
+A lot of the cameras out there are really made for livestreamers and boast features for things like built-in AI face detection for autofocus (something that you may or may not even be able to use in your software). At this point, the [Logitech Brio 4K](https://www.logitech.com/en-us/product/brio) is probably the best option, and even that camera came out in 2017. At a quick glance, Logitech is basically the only name brand in the game at this point, other than a random mix of lesser known manufacturers.
 
-**Max resolution range (typical):** 640x480 to 4K. This value ranges a lot, and it depends on your application. There are only a handful of 4k webcams out there, but there are a lot more 720p60fps cameras on the market these days due to the adoption of USB 3.0. If you're working with an older camera, USB 2 often does not have enough bandwidth to send 30fps worth of 1080p without some artifacts. Some web cameras are also guilty of doing some software compression of the image before sending it through the hardware connection, and this can add some image degradation.
+**Connection types:** USB 3.0 and USB-C is most common connection you'll see, but there are still some USB 2.0 connections out there.
+
+**Max resolution range (typical):** 640x480px to 4K. This value ranges a lot, and it depends on your application. There are only a handful of 4K webcams out there, but there are a lot more 720p60fps cameras on the market these days due to the adoption of USB 3.0. If you're working with an older camera, USB 2.0 often does not have enough bandwidth to send 30fps worth of 1080p without some artifacts. Some web cameras are also guilty of doing some software compression of the image before sending it through the hardware connection, and this can add some image degradation.
 
 **Webcam Pros:**
 
-- Cheap! -  the best widely available ones I've seen are around $80 to 200 bucks, but you can get them for as low as $10 at this point
+- Cheap! -  the best widely available ones I've seen are around 80USD to 200USD, but you can get them for as low as 10USD at this point
 - Easy to find
-- Reliable - leave them on for months (not always though!)
+- Reliable - they can be left on for long periods of time with minimal issues with heat and other issues (not always though!)
 - Full color image - they can see just about everything you can. Some can see some IR wavelengths. Rarely will you actually need the color image since most commonly used CV algorithms at the moment use monochrome images.
 - Widely supported by just about any software environment, and well understood.
 - They can see projection and content on screens. Essentially they see a less dynamic/contrasty version of what you see with your own eyes.
 
-**Webcam Cons:**
+**Webcam Watchouts:**
 
-- They can see projection and content on screens.
-- Some brands will have really poor image quality, especially in low light.
+- Many brands will have poor quality imagery compared to what people may be used to with their smartphones, especially in low light. These are generally not to be used for broadcast quality imagery.
+- Latency can sometimes be an issue with these. Not too much, but enough to feel just a little bit behind real life. 
 - Excessive image noise can severely impact tracking algorithms, especially in low light.
 - Rarely do you get the option to manually change the settings of the camera itself from within your software without a little bit of specialized code or access.
 - They typically have a fixed lens (no zooming or manual focus), but manual ones do exist
+- They can see projection and content on screens.
 - Sensitive to changes in daylight/natural light
 - Requires fairly sophisticated computer vision algorithms to extract really meaningful information from these cameras - no skeleton tracking or easy depth information
 - USB cable lengths can be limiting if you need to be extremely far away from your processing computer. Plan for extenders/repeaters if going much over 30ft (10m) away
-- Latency can sometimes be an issue with these. Not too much, but enough to feel just a little bit behind real life. Analog is a little bit faster in regard to processing the image. Also most of them, aside from the PSEye tend to max out at 30fps, and 60fps is really recommended for a lower feeling of latency and high tracking accuracy.
-- Some cameras have weird methods of autofocus that can really screw up your imagery. I've used a few that were nice HD cams, but the slow hunting autofocus made them a deal breaker.
+- Some cameras have weird methods of autofocus that can really screw up your imagery. I've used a few that were nice quality cameras, but the slow hunting autofocus made them a deal breaker.
 - Try leaving your camera on for an extended period of time. I've seen issues with inexplicable strange coloring, and just non-responsiveness after being left on for a long time with certain brands.
 
-**Range of effectiveness:** Varies by placement. Could watch an entire room of people, but with very little precision. Seems to work best in a range of about 1ft-50ft (.3-16m). If you're too far back, it can be difficult to get an accurate  or meaningful reading because the people will be too small to the sensor in relation to other image noise. Can be fine if they are on a fairly plain background though.
+**Range of effectiveness:** Varies by placement, lens and application. You could watch an entire room of people, but with very little precision. Seems to work best in a range of about 1ft-50ft (.3-16m). If you're too far back, it can be difficult to get an accurate  or meaningful reading because people's bodies will be too small to the sensor in relation to other image noise, unless you're on a solid background.
 
 **Optimal environment for repeatability/reliability:**
 
-This is one of your only options on the list that is able to see the full color range, so you're sort of stuck with this or the pricier options in the next spot if you're doing any tracking that plans on using the colors in your environment.
+If image quality isn't too important, you need a full color image (for tracking colors, or recording people for a video clip/photo)
 
-Ideally a controlled room with good artificial lighting and no windows will ensure this camera will react the same at any hour of the day.
+Ideally a controlled room with good artificial lighting will ensure this camera will react the same at any hour of the day. Natural lighting can cause issues depending on the amount of windows and time of year.
 
 Most simple tracking methods with this camera will work best when the subject is on a plain solid background so it is easy for your software to pick out a person from other objects in the space. Background subtraction is suggested in a case like this.
 
 **Troublesome environments:**
 
-An environment with a lot of changing daylight or natural light can really impact this camera's ability to reliably and predictably track at all hours.
+An environment with a lot of changing daylight or natural light can really impact this camera's ability to reliably and predictably track at all hours throughout the year.
 
-A room with none or very little light will pose a lot of issues for getting reliable readings from this camera.
-
-Rapidly changing lights or flashing projection in a space can sometimes upset their calibration.
+Very little to light, rapidly changing or flashing lights, or subjects coming close and far can sometimes cause issues with their automatic adjustment algorithms.
 
 **Webcam Further reading (some of these links are for older systems):**
 
-Other good webcam sources:
-[ECon Systems](https://www.e-consystems.com) - lots of custom options and lensing
+
 
 
 Check out the differences between a UVC cam and a non UVC cam to get an idea about if you'll be able to manually control the camera from within your software. Check out UVC camera control for macOS [here](http://phoboslab.org/log/2009/07/uvc-camera-control-for-mac-os-x)
@@ -169,6 +145,8 @@ Check out the differences between a UVC cam and a non UVC cam to get an idea abo
 ![otherrgb](images/red.jpg)
 
 ###### [Image source](http://www.brainfarmcinema.com/red.aspx)
+
+[EDIT IN PROGRESS]
 
 Webcams can only go so far in terms of quality. There are various reasons for wanting something in this category. and it usually comes down to needing really high quality and high resolution images at a very low latency. You may also be working with some unusual equipment, capturing input from another computer or image device that isn't a camera or have some other concerns about image input. There are still a ton of things you can do with analog cameras that you simply cannot do yet with all digital setups.
 
@@ -195,13 +173,14 @@ You're sometimes limited by the capture device and its support on your intended 
 ### Infrared Cameras
 ![infraredimage](images/infrared.jpg)
 
-These are really an essential tool for anyone working with interactive installations. Our visible light goes from 400-700nm, but certain cameras have the ability to see from 700-1000nm. This allows you to hide tracking lights (IR LED's or IR floodlights) and do other tracking of things not visible to the human eye.
+Infrared cameras have historically been one of the most important tools for artists working with interactive installations. In earlier years, an abundance of installations were set up in dark spaces for either aesthetic reasons or due to the technological limitations of display technology - aka dim projectors. In recent years, as installations move into well lit spaces and tracking algorithms improve, infrared camera relevance has started to shift. However, they still have some unique capabilities that come in handy for certain types of installations.
 
-The <a href="http://www.amazon.co.uk/dp/B000W3YQ1Y/?tag=creativenet-21" target="_blank">Playstation Eye</a> is sort of the go-to for a lot of these applications (it's used in projects like the <a href="http://www.eyewriter.org/">Eyewriter</a>) because it does 60fps (or higher!), has a range of lenses you can buy, and it's pretty cheap for the quality. <a href="http://createdigitalmotion.com/2009/08/trick-out-your-ps3-eye-webcam-best-cam-for-vision-augmented-reality/">Read more about it here</a>. It will need to be modified and requires a visible light filter to only get the IR bands. It is also a great option as a regular RGB cam since it has variable focus and you can <a href="http://peauproductions.com/store/index.php?main_page=product_info&amp;products_id=2">buy extra lenses</a> for it to get wide or narrow angles.
+As a quick primer, visible light goes from 400-700nm, but certain cameras have the ability to see infrared light from 700-900nm. This allows you to capture things that are not visible to the human eye, like IR tracking lights or a dark space illuminated by infrared light. Most cameras that aren't marketed as exclusively IR capable have infrared filters that block IR light, but in some cases, that filter can be manually removed. In order to limit a camera's ability to only see in infrared light, some may need filters that block all visible light - more info on that [here](http://www.flong.com/blog/2010/a-brief-note-on-infrared-filters-87-vs-87c/)
+
+There isn't a specific go-to camera for infrared these days. You can modify certain RGB cameras by removing their infrared filter..................[WIP]
 
 For the next level up, the other common one is the <a href="http://www.ptgrey.com/products/fireflymv/fireflymv_usb_firewire_cmos_camera.asp">Point Grey Firefly</a>. One tip for this one is to go ahead and buy only the monochrome version of this camera, as the color version has the additional color filter layers that can impact image quality and response. I stick with the firewire version of this camera for the bandwidth, but that can limit you on cable length (you can really only get firewire out about 10-15ft without using a repeater or amplifer, so keep that in mind when building equipment lists). The Firefly will also take a range of lenses that give you an insanely large aperture of around 1.4-1.2f and will be able to give you a much brighter image than a standard webcam. You WILL need a visible light filter for the Firefly to only get IR bands though. See Golan Levin's article on <a href="http://www.flong.com/blog/2010/a-brief-note-on-infrared-filters-87-vs-87c/">choosing the right IR filter for your application</a>. In addition to the Point Grey, you can check out these cameras from <a href="http://www.theimagingsource.com/en_US/products/cameras/">Imaging Source</a>.
 
-When choosing these higher end cameras, also make note of their sensor size. A larger sensor will potentially increase your output resolution and decrease sensor noise, but you are left with a smaller range of lens choices. The happy medium seems to be a 1/3" sensor with a CS mount for the widest range of options.
 
 **Connection Types:** USB 2 (Playstation Eye or another webcam - modified), USB 3 (Point Grey Flea 3), Kinect's IR cam, Composite/Firewire (old Sonycam's with night vision)
 
@@ -260,32 +239,52 @@ There are also other methods of obtaining the same information with a high frame
 
 **Resolution Range:** This mostly tends to top out around 320x240 @30fps for the more consumer level cameras, mostly for TOF. TOF cameras use different sensors than standard CMOS cams which impacts their speed and resolution. The Kinect is faster and higher resolution because they just use a standard IR cam.  Check the individual camera for it's maximum resolution.
 
-**Range of effectiveness:** Typically less than 10-12ft ( 3-4m).  Some cameras like the Intel/Creative TOF camera are really only designed for desk use and give you about 1m of effective distance, if that. Other TOF cameras like the D-Imager can give you up to 10m of range though. Makes certain sensors not very robust for use on large stages. Requires multiple sensors to cover a large area and thus complicates the CV processing chain and hardware setup. LIDAR can do a large area, but not necessarily in real time.
+**Range of effectiveness:** Typically less than 10-15ft (3-5m) for many popular cameras. Very close range (<1ft/30cm) often requires a device particularly suited for close range tracking.
 
 **Depth Camera Pros:**
 
-- Depth images give you the option of really amazing background subtraction because you can totally ignore everything beyond about 10ft (with a Kinect).
-- Processed depth images give you a lot of great tracking information like hand skeleton, body skeleton, shape normals. You can build 3D models of rooms or objects. You can do fairly high quality body and facial motion capture for use in 3D rendering programs.
-- Isn't affected by light from a projector. A lot of the same good qualities as standard IR, but they should only be used if you <em>need</em> depth information...they are not preferred over regular IR. Again, do your best to choose right tool for the job.
+- Depth images give you the option of great background subtraction for tracking people and object because you can effectively ignore things after a certain depth range
+- Machine Vision algorithms for depth images can easily give you additional information like hand skeleton, body skeleton, and shape normals. Some software sllows you to build up a reusable 3D Model of a space or object by moving the camera around it. You can also do decent body and facial motion capture for use in 3D rendering programs.
+- Just like infrared cameras, Depth cameras aren't effected by light from projectors and screens if you're working with something where a tracking algorithm could get confused by the images that people are interacting with. This is a big reason why they are favorites for simple touch applications with screens.
 
 **Depth Camera Cons:**
 
-- Because of the use of IR, these cameras will also be sensitive to changes in sunlight.
-- Do not rely on depth cameras if you need a sharp, clean outline of your subject. You will get jagged artifacts that will need to be blurred or processed to get smooth lines.
-- Structured light cameras aren't able to work at an incredibly close range (ie right in front of them). Time of flight cameras are a little more robust in this regard, and are better if you need to use them really close up.
-- Certain surfaces will interfere with the ability to produce a good depth image. Shiny surfaces will effectively be invisible or cause strange reflection artifacts in your image.
-- Using multiple systems together occasionally requires special consideration. Overlapping structured light from the Kinect (if they are right next to each other) can cause double images to appear due to the extra light grid. If the Kinects are more perpendicular to each other, this negative effect is less likely. You can also use this trick: attach a vibrating motor to one Kinect to make the other sensor's dots blur, and the vibrating sensor's own dots will stay in focus.
-- Fairly limited effective range.
 
-**Depth Image Examples:**
+- Compatibility/Interoperability: There are many, many camera options out there and many have different ways of actually communicating with your software. Some of the more popular options have well maintained libraries for many creative coding frameworks, but more specialized depth cameras may have you making your own bridges to work with them.
+- Fixed lensing - pretty much all of these cameras, aside from the Azure Kinect, have fixed lenses which means you won't be able to change their field of view.
+- Resolution and framerate limitations - this is greatly improved since a few years ago, but you often still aren't getting anything like a 4K60fps depth or RGB image. 
+- Due to the reliance on IR, these cameras will often be sensitive to changes in sunlight and only certain ones may be acceptable for 24/7 outdoor use (even behind a window).
+- Subject outlines can be a bit rough depending on your camera, however they have improved dramatically in recent years and there are several algorithms for keeping a cleaner edge.
+- Very close range applications may need additional testing, espeically if your subject is within a few inches or centimeters from the lens
+- Certain surfaces will interfere with the ability to produce a good depth image. For many cameras, shiny surfaces be invisible or cause strange reflection artifacts in your image. Additionally, some fabrics have unusual behaviors in their absorbtion of light
+- Using multiple systems together occasionally requires special consideration, particularly with structured light systems.
+- Many cameras have limitations for how far they can generate depth images, and many common ones really only work out to about 10-15ft/3-5m. There are certainly exceptions, but be wary of looking at a manufacturer's specification for maximum depth range as they are often a bit oversold.
 
-LIDAR/Structured light was used to get the massive scans of the spaces in this Radiohead video for House of Cards:
+**Depth Cameras to consider and further reading**
+ - [Intel Realsense](https://www.intelrealsense.com/compare-depth-cameras/)
+ - [Microsoft Azure Kinect](https://docs.microsoft.com/en-us/azure/Kinect-dk/hardware-specification) - this is Microsoft's latest version of the Kinect from 2019. It has many improvements over the originals and is much more geared towards developers and integration instead of gaming and the Xbox. It features two different lens options for a wide field of view, and it can capture a 1024x1024 resolution depth image.
+ - Microsoft Kinect V2. You are no longer able to purchase these new, so I don't suggest them for long term installations. However, they do have a lot of software options out there from years ago and are great for quick demos.
+ - [2015 Academic paper comparing Depth Cameras](https://www.ocularrobotics.com/wp-content/uploads/2015/12/MMT2015_MMT2015_61.pdf)
+ - [Stimulant's Depth Camera Shootout from 2016](https://stimulant.com/depth-sensor-shootout-2/)
 
-<iframe src="http://www.youtube.com/embed/8nTFjVm9sTQ?rel=0" width="640" height="480" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+### LIDAR
 
-**Further reading:**
+[NEEDS IMAGE]
 
-If you're just looking for stereo vision capture that can infer depth info, check out the <a href="http://www.ptgrey.com/products/bumblebee2/bumblebee2_stereo_camera.asp&gt; Point Grey Bumblebee &lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=">Readings on structured light and how it works</a>
+[LiDAR Wikipedia entry](https://en.wikipedia.org/wiki/Lidar)
+
+LIDAR is a specialized imaging technique that has some similarities to the depth  cameras discussed previously. LIDAR stands for Light Detection and Ranging and it has many applications in various industries, but it has caught on as a technology for interactive installations in the last decade.
+
+Suggested brands to investigate:
+
+- FARO
+- SICK
+- Hokuyo
+- Quanergy
+- LIVOX
+- Velodyne
+- Ouster OS1 / OS0
+- Intel L515
 
 ----------------
 
@@ -339,6 +338,8 @@ Check out this guy doing some random demos with a thermal camera:
 
 ### High End Machine Vision Cameras
 
+[NEED IMAGE]
+
 These cameras are typically employed in industries like manufacturing that require a high degree of stability and performance for performing computer vision tasks. 
 
 One example would be the use of cameras and specialized software to monitor a fast moving automated assembly line and using the visual data to ensure every product looks correct. They can also be employed for things like processing produce - sorting ripe tomatoes from green tomatoes at very high speeds.
@@ -346,11 +347,28 @@ One example would be the use of cameras and specialized software to monitor a fa
 This area of cameras is incredibly complex and we won't go into all of the specifics here, but you should definitely be aware that these specialized systems exist. The most common ones you will probably come across have already been mentioned, like machine vision infrared or thermal cameras. most of them range from having standard interfaces like USB and GigE, to proprietary cables and PCI cards for maximum data speed and low latency.
 
 **Camera resources:**
+[Basler](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/)
 [e-Con Cameras](https://www.e-consystems.com)
 [Allied Vision](https://www.alliedvision.com/en/digital-industrial-camera-solutions.html)
+[Point Grey/FLIR Blackfly](https://www.flir.com/products/blackfly-s-usb3/)
+[OpenMV](https://openmv.io)
+[Elphel](https://www3.elphel.com/model_353_cameras)
+[IDS](https://en.ids-imaging.com/store/products/cameras/ids-interface/usb-2.0-usb-3.0/ids-family/le.html)
+[Imperx](https://www.imperx.com)
+[Teledyne](https://www.teledynedalsa.com/en/products/imaging/cameras/genie-nano-1gige/)
+
+### Multi-camera and on-board compute systems
+
+[WIP]
+Camera systems that may use multiple cameras or are cameras that are integrated with on-board computing power for computer vision.
+
+[Pixy](https://pixycam.com/pixy2/)
+[Vizy](https://www.kickstarter.com/projects/charmedlabs/vizy)
 
 
 ### High-speed or Slow Motion Cameras
+
+[NEEDS IMAGE]
 
 [High-speed Cameras](https://en.wikipedia.org/wiki/High-speed_camera) are a special class of cameras that can capture 250 frames per second or higher, even up to 250,000fps to several million fps in some cases. If the high-end machine vision cameras above are for real-time processing, I'm thinking of high-speed cameras more for offline recording and viewing - a slightly different workflow. High-speed cameras are fairly uncommon in interactive installations because the (current) limitations of physics mean you can't watch reality in real time and slow motion reality at the same time. Years ago, getting cameras that could capture higher than 60fps were fairly specialized and uncommon, especially for the consumer market. Now almost every flagship smartphone can record 120-240fps and sometimes even higher in burst modes. Some standard webcams can also get up to 120fps. The primary market for professional high speed cameras is for industrial purposes, like the high end machine vision cameras covered above, or for the film industry. Since these applications are fairly niche and low demand, these cameras tend to be incredibly expensive - ranging from around $500USD on the low end to $30,000USD to $50k+ on the high end.
 
@@ -365,22 +383,25 @@ Noteable high speed camera manufacturers are [Phantom cameras from Vision Resear
 
 ### Wireless cameras
 
-Wireless is a bit of a misnomer since almost any camera can be made wireless these days, and obviously even smartphone cameras count as a wireless camera. Smartphone cameras can be sent to desktop computers via various streaming apps. GoPro cameras are another classic consumer wireless camera. The primary application is for film shoots (monitoring, recording backups, etc) and specialized uses like mounting to a flying drone or other temporary applications.
+Wireless is a bit of a misnomer since almost any camera can be made wireless these days, and obviously even smartphone cameras count as a wireless camera. These would most commonly be used on film shoots for drones or remote monitoring by a director, but there may be limited usage for certain kinds of interactive installations and events. This technology is more about the interface that sends the image signal more than the actual image capture, so there isn't a ton to cover here.
 
-Since wireless cameras are more about the interface that sends the image signal more than the actual image capture, there isn't a ton to cover here. There are a lot of devices out there for connecting any camera to a wireless interface that can stream the signal to a nearby computer over wifi, or over the internet via an integrated 4G/5G interface. The primary issues that will get introduced with wireless systems are: reliability, increased latency, and signal degredation as a side effect of video compression. Also - battery life is another beast to manage.
+There are several devices out there for connecting any camera to a wireless interface that can stream the signal to a nearby computer over wifi, or over the internet via an integrated 4G/5G interface. The primary issues that will get introduced with wireless systems are: reliability, increased latency, and signal degredation as a side effect of video compression. Also - battery life is another beast to manage.
 
 Professional Wireless camera interfaces to investigate include:
 - [Teradek](https://teradek.com)
 - [Paralinx](https://www.paralinx.net) - shares parent company and chipsets with Teradek
 - [Vaxis](https://vaxis.us)
 
-Sometimes you can look for wireless video signal devices instead of devices geared specifically towards cameras. There are numerous wireless HDMI and RCA camera devices out there with various reports of reliability and usefulness.
+On the low end of cost for experimentation, smartphone cameras can be wirelessly streamed to desktop computers via various streaming apps. GoPro cameras are another classic consumer wireless camera that can be interfaced with. There are also a range of battery powered [security cameras](https://www.safewise.com/blog/best-wireless-security-cameras/) that may be the right choice depending on your application.
+For other resources, you can also look for devices marketed for [wirelessly sending HDMI](https://www.nytimes.com/wirecutter/reviews/the-best-wireless-hdmi-video-transmitter/) and RCA video signals instead of devices geared specifically towards making cameras wireless. 
 
-Some wireless systems rely on existing wifi or other tradiitonal network infrastructure, and some generate and receive their own wireless signals. Many of them promise the ability to send signals over very long distances - like 750 to 1500ft (~230-460m) and up to [5000ft](https://teradek.com/collections/bolt-4k-max-series) (about 1.5km). I would take those estimate with a grain of salt as they often require line of sight and very little interference. Signals will work better in the middle of nowhere versus a crowded multistory building in the city.
+Some wireless systems rely on existing wifi or other tradiitonal network infrastructure, and some generate and receive their own wireless signals. Many of them promise the ability to send signals over very long distances - like 750 to 1500ft (~230-460m) and up to [5000ft](https://teradek.com/collections/bolt-4k-max-series) (about 1.5km). I would take those distance estimate with a grain of salt as they often require line of sight and very little interference, and reliable Wifi is always a weakpoint on many productions.
 
-### Motion capture systems
+### Motion capture and XR systems
 
 These could have their own article and I have limited experience with them, but they are worth adding to the list for completeness. Motion capture systems are primarily used to capture the movements of performers that are then mapped to the skeletons of 3D models, essentiall puppeteering them. Motion capture systems can be camera-based or non-camera-based (like a suit covered in IMU's or inertial measurement units like the [Xsens](https://www.xsens.com)). We'll just cover the basic camera-based systems here.
+
+[Stype](https://stype.tv/redspy/)
 
 [WIP]
 
@@ -396,11 +417,16 @@ Larger "volcap" systems involve whole studios (although there are some systems t
 
 Mention Volucams (https://twitter.com/BenSchwartzXR/status/1311704650475884545)
 
-http://www.ioindustries.com/volucam.html
+[Volucam](http://www.ioindustries.com/volucam.html)
 
 Re-lighting, scene size limitations, complex scene limitations, movement limitations, bandwidth of final assets (mesh+color data per frame)
 
 [WIP]
+
+### 360 Cameras and Filming
+
+[WIP]
+https://www.insta360.com
 
 
 ### Other cameras and systems (robotic/Moving and other observational tracking devices, Security Cameras)
@@ -427,28 +453,59 @@ The biggest advantage that analog cameras used to have over their digital counte
 Need ideas here - 
 [Microphone Arrays as generalized cameras](https://ieeexplore.ieee.org/document/4270343)
 
+Notes about the actual physical limitations of cameras and technologies that will need to be further developed to overcome them?
 
-### Camera interfaces (USB 2 and 3, HDMI, NDI, IP, GigE)
+
+### Camera interfaces (USB 2 and 3, HDMI, NDI, IP cameras, GigE)
+
+[WIP]
+
+[GigE Vision Wikipedia](https://en.wikipedia.org/wiki/GigE_Vision)
 
 Another important thing to keep in mind is that while many artistically geared software environments do work off-the-shelf with various cameras and input types (typically with [UVC](https://en.wikipedia.org/wiki/USB_video_device_class), more exotic cameras aren't always plug and play. Make sure you do your research before making a big purchase. If the tool doesn't exist to pull in a video feed, there are a few technologies that can route video between applications or even over the network. The most common tools are [Syphon](http://syphon.v002.info) for macOS and [Spout](https://spout.zeal.co) for Windows, but there are other options out there as well.
 
+See also: CameraLink and CoaXPress
+
 ### Camera measurements
+
+[WIP]
 
 Talk about the very basics of measuring a cameras field of view based on its lens. This can be good for estimating the amount of image you'll get at a given distance.
 
 ### Outdoor considerations
 
+[WIP]
+
 Extra notes on using cameras outdoors? Link to my outdoor writeup?
 
 ### Notes on Latency
 
-How does the latency vary between different cameras? Are there ways to reduce it?
+[WIP]
+
+For the purposes of this writeup, we'll consider latency to be the delta or time between a person's action and the response or display from the software that captures their image.
+
+Most displays run at 60 frames per second, which means they are showing an image every (approximately) 16 milliseconds. When a camera is capturing an image, delay is introduced at several stages - the first and largest of importance is the camera's exposure time. Cameras need to leave their shutter open for a period of time to collect light on the sensor - the longer the shutter is open, the more light is collected. At 60fps, the ideal is a shutter speed of 1/60s, but shutter speeds can be longer to allow more light in for a darker environment. Additionally, latency can then be introduced by a camera's own buffering and processing, transmission to computer and subsequent writing to computer memory, and finally your own software's processing. 
+
+Some cameras that advertise "low latency" are at around 35ms, which means in a best case scenario, you're seeing your reaction almost 2 frames after you've performed an action.
+
+Latency is especially noticable for audio applications and less so for visual. Musicians begin to have trouble with latency that is [larger than 8-12ms](https://ask.audio/articles/monitoring-latency-how-low-can-you-go). If you're planning on using a camera as a trigger for something like an interactive drumming station, you may find that the latency is unacceptable for certain kinds of playing.
+
+Here is a great Reddit thread on [computer vision latency](https://www.reddit.com/r/computervision/comments/4732ir/camera_for_realtime_image_processing/)
+
+
 
 ### Notes on Lenses
 
+[WIP]
+
 Talk briefly about different lenses and mounts
+Microscopy? Macro?
+Zoom lenses
 
 ### Image touch-up and Noise
+
+[WIP]
+
 Low light, De-noising, upscaling and other machine learning cleanup
 
 
@@ -462,4 +519,30 @@ Low light, De-noising, upscaling and other machine learning cleanup
 [DepthKit](https://www.depthkit.tv)
 
 Huge thanks to [Elliot Woods](http://elliotwoods.info) for a ton of thoughtful suggestions on how to expand  the guide from its 2013 version. [Kyle McDonald](http://kylemcdonald.net), [Theo Watson](http://theowatson.com/), <a href="http://thesystemis.com/">Zach Lieberman</a> and <a href="http://www.flong.com/">Golan Levin</a> for some great additional tips to help round out some of the suggestions here.
+
+Rough notes for for 2020 update:
+[GOOGLE DOC FOR CAMERAS](https://docs.google.com/spreadsheets/d/1zM1VhLzEeqW-6vP7xw6DVx-RA1b90rNA8ZxfCAxu-qw/edit#gid=0)
+
+To-do for 2020 Update:
+
+- Clean up language and links
+- Publish a version to Medium/personal site?
+- Update references to various camera technologies in all categories
+- Reference different connection protocols now available or more common (HDMI Capture, NDI, IP Cameras, GigE)
+- Webcam update technologies (Logitech Brio)
+- Other RGB Cameras (PTZ, 4K, DSLR, Broadcast)
+- Major depth camera update (Kinect Azure, Orbbec, Realsense, include [Stimulant Depth camera shootout link](https://stimulant.com/depth-sensor-shootout-2/), [GigE Realsense](https://imaging.framos.com/cpc/en/d435e/?keyword=Realsense+GigE+Camera&gclid=EAIaIQobChMIsqmywIPU5wIViJOzCh2NZQYsEAAYASAAEgIg7fD_BwE)   
+- Thermal camera update (portable cams, USB, cheaper)
+- High Speed cameras (Edgertronic, ix cameras, phantom)
+- Others? (Leap Motion, GoPro, motion capture systems, things like Blacktrak(https://blacktrax.cast-soft.com) ), other things to consider as cameras or "observational tracking devices"
+- Older camera technologies (DVCam, RCA/Analog, "Analog" capture devices, etc)
+- Experimental
+- Maybe more general tips outside of specific camera technologies? Suggestions below from Elliot
+- Monochrome advantages
+- USB3 vs GigE
+- Lenses
+- Noise and Noise reduction
+- Machine learning touchup (upscaling, noise reduction, low light)
+- Using a smartphone camera (pros, cons, intgerated sensor data and intrinsics)
+- High end machine vision cams
 
