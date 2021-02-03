@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guide to Cameras for Interactive Installations</title>
+    <script src="assets/scripts.js"></script>
+
+    <link rel="stylesheet" href="assets/html.css">
+
+  </head>
+  <body data-type="book">
+    <div class="container">
+      <section data-type="chapter" id="infrared-cameras-80P9hMk"><h1>Infrared Cameras</h1>
+<p><img src="assets/infrared.jpg" alt="infraredimage"></p>
+<p>Infrared cameras have historically been one of the most important tools for artists working with interactive installations. In earlier years, an abundance of installations were set up in dark spaces for either aesthetic reasons or due to the technological limitations of display technology - aka dim projectors. In recent years, as installations move into well lit spaces and tracking algorithms improve, infrared camera relevance has started to shift. However, they still have some unique capabilities that come in handy for certain types of installations.</p>
+<p>As a quick primer, visible light goes from 400-700nm, but certain cameras have the ability to see infrared light from 700-900nm. This allows you to capture things that are not visible to the human eye, like IR tracking lights or a dark space illuminated by infrared light. Most cameras that aren&apos;t marketed as exclusively IR capable have infrared filters that block IR light, but in some cases, that filter can be manually removed. In order to limit a camera&apos;s ability to only see in infrared light, some may need filters that block all visible light - more info on that <a href="http://www.flong.com/blog/2010/a-brief-note-on-infrared-filters-87-vs-87c/">here</a></p>
+<p>There isn&apos;t a specific go-to camera for infrared these days. You can modify certain RGB cameras by removing their infrared filter..................[WIP]</p>
+<p>For the next level up, the other common one is the <a href="http://www.ptgrey.com/products/fireflymv/fireflymv_usb_firewire_cmos_camera.asp">Point Grey Firefly</a>. One tip for this one is to go ahead and buy only the monochrome version of this camera, as the color version has the additional color filter layers that can impact image quality and response. I stick with the firewire version of this camera for the bandwidth, but that can limit you on cable length (you can really only get firewire out about 10-15ft without using a repeater or amplifer, so keep that in mind when building equipment lists). The Firefly will also take a range of lenses that give you an insanely large aperture of around 1.4-1.2f and will be able to give you a much brighter image than a standard webcam. You WILL need a visible light filter for the Firefly to only get IR bands though. See Golan Levin&apos;s article on&#xA0;<a href="http://www.flong.com/blog/2010/a-brief-note-on-infrared-filters-87-vs-87c/">choosing the right IR filter for your application</a>. In addition to the Point Grey, you can check out these cameras from <a href="http://www.theimagingsource.com/en_US/products/cameras/">Imaging Source</a>.</p>
+<p><strong>Connection Types:</strong> USB 2 (Playstation Eye or another webcam - modified), USB 3 (Point Grey Flea 3), Kinect&apos;s IR cam, Composite/Firewire (old Sonycam&apos;s with night vision)</p>
+<p><strong>Resolution Range:</strong> You can generally get the same resolutions in IR that you can in regular webcams. There are plenty of tutorials out there for modifying standard webcams to only process IR light.</p>
+<p>**Range of effectiveness:**Generally the same as a webcam (1ft-50ft or .3-16m). Some IR cams like the Point Grey have a wider range of security camera lenses for various zoom ranges if you need to do tracking from far away.</p>
+<p><strong>Infrared Pros:</strong></p>
+<ul>
+<li>They cannot see images that are projected or on a screen (some can see content on screens...depends on screen type). IR and projection are a really nice interactive match, but you tend to need a dark space to pull these off. Are you also tired of being relegated to a dark windowless room with these tools?</li>
+<li>Can be used in dark spaces when used with IR emitters.</li>
+<li>Since they can see what the human eye can&apos;t, they are most useful for hiding certain elements like lights used for tracking points or illuminating a space.</li>
+<li>Tracking a point of IR light is an incredibly effective and robust tracking method because you can have a bright point of light that is invisible to the human eye.</li>
+<li>Good for tracking a large area like a stage flooded with IR.</li>
+</ul>
+<p><strong>Infrared Cons:</strong></p>
+<ul>
+<li>Monochrome</li>
+<li>They require a healthy source of infrared light. Don&apos;t assume the lights inside will provide the type of light these cameras need to see effectively. You may need IR emitters to properly illuminate the space. People wont be able to see the extra light, but the camera will.</li>
+<li>Sensitive to sunlight and certain stage lights. Some stage lights will be bright enough to throw off tracking on an IR camera because the range of the light and camera overlap enough. There may be problems that the camera can see that you might not have seen with your eyes, so it can be useful to know the complete light profile of a room or to just go there with a camera beforehand.</li>
+<li>Certain clothes and materials look different in IR than in visible light. Can have weird effects sometimes.</li>
+</ul>
+<p><strong>Optimal environment for round the clock reliability</strong></p>
+<p>Room with a steady amount of IR light, either artificial or coming from a point source. Undesired sunlight can blow out an IR cam if the aperture isn&apos;t set right or if it doesn&apos;t have an automatic adjustment.</p>
+<p><strong>Troublesome environments</strong></p>
+<p>A dark room with insufficient IR light. A lot of normal light bulbs will still show up in IR even if they don&apos;t put out enough light to illuminate the IR spectrum, so keep an eye out for those in the background as pesky tracking distractions.</p>
+<p><strong>Further Reading for IR cams</strong></p>
+<p><a href="http://frieder-weiss.de/eyecon/infrared.html">Frieder Weiss&apos;s writeup on IR cameras and equipment</a>&#xA0;-2008</p>
+<p><strong>Other IR camera suggestions:</strong>
+Cheap Infrared CCTV cams work well, but you&apos;ll need a capture device
+<a href="http://www.supercircuits.com/security-cameras/2-megapixel-hdcctv-box-security-camera-hdmi-blk-hdc20&gt;Full HD over HD-SDI or HDMI (needs filter!)&lt;/a&gt;&lt;br /&gt; &lt;a href=">Sony CCTV cam good in low light (needs light filter)</a>
+The Sony M183 or M383 are classic low latency cams used for IR sensing, but are now discontinued, but check eBay.</p>
+</section>
+<a id="prev-link" href="Other_RGB_Cameras.html">Previous: Other RGB cameras</a>
+
+<a id="next-link" href="DepthCameras.html">Next: Depth Cameras</a>
+    </div>
+  </body>
+</html>

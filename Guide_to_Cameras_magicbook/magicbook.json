@@ -1,0 +1,76 @@
+{
+  "title": "Guide to Cameras for Interactive Installations",
+  "destination": "build/:build",
+  "files": [
+    "content/toc.html",
+    {
+      "label": "Part 0 - Intro",
+      "files": [
+        "content/00_00_Introduction.md"
+      ]
+    },
+    {
+      "label": "Part 1 - The Basics",
+      "files": [
+        "content/01_01_Webcam.md",
+        "content/01_02_Other_RGB_Cameras.md",
+        "content/01_03_InfraredCameras.md",
+        "content/01_04_DepthCameras.md",
+        "content/01_05_LIDAR.md"
+      ]
+    },
+    {
+      "label": "Part 2 - The Exotic",
+      "files": [
+        "content/02_01_Thermal.md",
+        "content/02_02_MachineVisionCams.md",
+        "content/02_03_MultiCamera.md",
+        "content/02_04_HighSpeed.md",
+        "content/02_05_Wireless.md",
+        "content/02_06_MoCapSystems.md",
+        "content/02_07_VolumetricCapture.md",
+        "content/02_08_360cameras.md",
+        "content/02_09_Others.md",
+        "content/02_10_OlderCameras.md",
+        "content/02_11_Experimental.md"
+      ]
+    },
+    {
+      "label": "Part 3 - Supplemental Information",
+      "files": [
+        "content/03_01_Camera_Interfaces.md",
+        "content/03_02_Outdoor_Considerations.md",
+        "content/03_03_Notes_on_Lenses.md",
+        "content/03_04_Notes_on_Latency.md",
+        "content/03_05_Notes_on_TouchUp.md",
+        "content/03_06_BriefSoftwareDiscussion.md",
+        "content/03_07_ReferencesAndCredits.md"
+      ]
+    }
+  ],
+  "builds": [
+    {
+      "format": "pdf",
+      "layout": "layouts/pdf.html",
+      "stylesheets": {
+        "files": [
+          "stylesheets/pdf.scss"
+        ]
+      }
+    },
+    {
+      "format": "html",
+      "layout": "layouts/html.html",
+      "stylesheets": {
+        "files": [
+          "stylesheets/html.scss"
+        ]
+      },
+      "javascripts": {
+        "files": [
+          "javascripts/scripts.js"
+        ]
+      }
+    }
+  ]
+}

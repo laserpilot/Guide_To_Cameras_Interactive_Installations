@@ -1,0 +1,37 @@
+/*body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #333;
+}*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: font-path('Roboto-Bold.eot');
+  src: font-path('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+       font-path('Roboto-Bold.woff') format('woff'),
+       font-path('Roboto-Bold.ttf') format('truetype'),
+       font-path('Roboto-Bold.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson';
+  src: font-path('CrimsonText-Regular.eot');
+  src: font-path('CrimsonText-Regular.eot?#iefix') format('embedded-opentype'),
+       font-path('CrimsonText-Regular.woff') format('woff'),
+       font-path('CrimsonText-Regular.ttf') format('truetype'),
+       font-path('CrimsonText-Regular.svg#crimsontext-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, p, ul, li {
+  font-family: 'Crimson';
+  color: #333;
+}
+
+img {
+  margin: auto;
+  display: block;
+}

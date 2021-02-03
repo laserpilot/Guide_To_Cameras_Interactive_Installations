@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guide to Cameras for Interactive Installations</title>
+    <script src="assets/scripts.js"></script>
+
+    <link rel="stylesheet" href="assets/html.css">
+
+  </head>
+  <body data-type="book">
+    <div class="container">
+      <section data-type="chapter" id="notes-on-latency-Gqn7CKo"><h1>Notes on Latency</h1>
+<p>[WIP]</p>
+<p>For the purposes of this writeup, we&apos;ll consider latency to be the delta or time between a person&apos;s action and the response or display from the software that captures their image.</p>
+<p>Most displays run at 60 frames per second, which means they are showing an image every (approximately) 16 milliseconds. When a camera is capturing an image, delay is introduced at several stages - the first and largest of importance is the camera&apos;s exposure time. Cameras need to leave their shutter open for a period of time to collect light on the sensor - the longer the shutter is open, the more light is collected. At 60fps, the ideal is a shutter speed of 1/60s, but shutter speeds can be longer to allow more light in for a darker environment. Additionally, latency can then be introduced by a camera&apos;s own buffering and processing, transmission to computer and subsequent writing to computer memory, and finally your own software&apos;s processing.</p>
+<p>Some cameras that advertise &quot;low latency&quot; are at around 35ms, which means in a best case scenario, you&apos;re seeing your reaction almost 2 frames after you&apos;ve performed an action.</p>
+<p>Latency is especially noticable for audio applications and less so for visual. Musicians begin to have trouble with latency that is <a href="https://ask.audio/articles/monitoring-latency-how-low-can-you-go">larger than 8-12ms</a>. If you&apos;re planning on using a camera as a trigger for something like an interactive drumming station, you may find that the latency is unacceptable for certain kinds of playing.</p>
+<p>Here is a great Reddit thread on <a href="https://www.reddit.com/r/computervision/comments/4732ir/camera_for_realtime_image_processing/">computer vision latency</a></p>
+</section>
+<a id="prev-link" href="Notes_on_Lenses.html">Previous: Camera measurements</a>
+
+<a id="next-link" href="Notes_on_TouchUp.html">Next: </a>
+    </div>
+  </body>
+</html>

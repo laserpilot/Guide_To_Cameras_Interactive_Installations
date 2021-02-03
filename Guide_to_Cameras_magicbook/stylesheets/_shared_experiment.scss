@@ -1,0 +1,973 @@
+/* Experimenting with the CSS from Rune Madsen's site https://programmingdesignsystems.com/introduction/index.html#introduction-AlRYsdq */
+
+.color-green {
+  color:#29b79b
+}
+
+.half-margin-top {
+  margin-top:10px
+}
+
+.margin-bottom {
+  margin-bottom:20px
+}
+
+.no-margin {
+  margin:0
+}
+
+.no-margin-bottom {
+  margin-bottom:0
+}
+
+.half-margin-bottom {
+  margin-bottom:10px
+}
+
+.allcaps, div[data-type=exercise] header h2 {
+  text-transform: uppercase;
+  font-size:1.25em
+}
+
+.text-center {
+  text-align:center
+}
+
+.text-width, section[data-type=chapter] section[data-type^=sect] > h1, section[data-type=chapter] section[data-type^=sect] > h2, section[data-type=chapter] section[data-type^=sect] > ol, section[data-type=chapter] section[data-type^=sect] > p, section[data-type=chapter] section[data-type^=sect] > ul, section[data-type=chapter] > h1, section[data-type=chapter] > h2, section[data-type=chapter] > header, section[data-type=chapter] > ol, section[data-type=chapter] > p, section[data-type=chapter] > ul {
+  max-width: 690px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right:auto
+}
+
+.media-width {
+  max-width: 770px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right:auto
+}
+
+.font-xsmall, .navigation div[data-type=copyright-page] p, div[data-type=footnotes] ol, span[data-type=footnote] {
+  font-size: .8em;
+  line-height:1.3em
+}
+
+.caption, .font-small, figure figcaption {
+  font-size: 1em;
+  line-height:1.4em
+}
+
+.font-normal, p, section[data-type=chapter] section[data-type^=sect] > ol, section[data-type=chapter] section[data-type^=sect] > ul, section[data-type=chapter] > ol, section[data-type=chapter] > ul {
+  font-size: 1.12em;
+  line-height:1.6em
+}
+
+.font-large, .navigation .next-page a:nth-child(1), .navigation .prev-page a:nth-child(1) {
+  font-size: 1.3em;
+  line-height:1.5em
+}
+
+@media (min-width: 590px) {
+  figure.left {
+      max-width: 375px;
+      float: left;
+      margin-right: 40px;
+      margin-bottom: 30px;
+      margin-left:50px
+  }
+
+  figure.right {
+      max-width: 375px;
+      float: right;
+      margin-left: 40px;
+      margin-bottom: 30px;
+      margin-right:50px
+  }
+}
+
+.nobullets {
+  list-style-type: none;
+  padding-left:0
+}
+
+.placeholder {
+  background-color:#f7f7f7
+}
+
+.white-img canvas, .white-img img {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .1);
+  border: 1px solid #ededed;
+  border-right-color: #d4d3d3;
+  border-bottom-color:#d4d3d3
+}
+
+.btn {
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
+  padding: .55em .8em;
+  border: 2px solid #333;
+  background-color: #333;
+  font-weight:700
+}
+
+.btn.large {
+  font-size: 1.2em;
+  padding:.7em 1.2em
+}
+
+.btn.invert {
+  background: #fff;
+  color:#333
+}
+
+body {
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  font-feature-settings: "kern"
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-BoldItalic-Web.eot);
+  src: url(AtlasGrotesk-BoldItalic-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-BoldItalic-Web.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch:normal
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-Bold-Web.eot);
+  src: url(AtlasGrotesk-Bold-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-Bold-Web.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch:normal
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-MediumItalic-Web.eot);
+  src: url(AtlasGrotesk-MediumItalic-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-MediumItalic-Web.woff) format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-stretch:normal
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-Medium-Web.eot);
+  src: url(AtlasGrotesk-Medium-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-Medium-Web.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch:normal
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-RegularItalic-Web.eot);
+  src: url(AtlasGrotesk-RegularItalic-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-RegularItalic-Web.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch:normal
+}
+
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(AtlasGrotesk-Regular-Web.eot);
+  src: url(AtlasGrotesk-Regular-Web.eot?#iefix) format("embedded-opentype"), url(AtlasGrotesk-Regular-Web.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch:normal
+}
+
+* {
+  box-sizing:border-box
+}
+
+body {
+  margin: 0;
+  padding:0
+}
+
+figure {
+  margin:0
+}
+
+iframe {
+  border: none;
+  overflow:hidden
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin:7px 0
+}
+
+input[type=range]:focus {
+  outline:0
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #404040;
+  border:none
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #404040;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top:-7px
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background:#404040
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #404040;
+  border:none
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 7px;
+  background: #404040;
+  cursor:pointer
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: 0 0;
+  border-color: transparent;
+  color:transparent
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #404040;
+  border:none
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #404040;
+  border:none
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 7px;
+  background: #404040;
+  cursor: pointer;
+  height:1px
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background:#404040
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background:#404040
+}
+
+body {
+  font-size: 100%;
+  font-family: AtlasGrotesk, Helvetica, sans-serif;
+  color: #404040;
+  font-weight:400
+}
+
+p {
+  line-height:1.6em
+}
+
+a {
+  color: #404040;
+  text-decoration:none
+}
+
+blockquote {
+  margin-bottom:2em
+}
+
+blockquote p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin-bottom:.5em
+}
+
+blockquote cite {
+  color: #888;
+  font-style:normal
+}
+
+blockquote cite span[data-type=footnote] a {
+  color:#888
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.1em;
+  letter-spacing: -.02em;
+  margin-bottom: .1em;
+  font-weight:500
+}
+
+h2, section[data-type=sect1] h1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.8em;
+  line-height: .95em;
+  letter-spacing: -.02em;
+  margin-bottom: .1em;
+  font-weight:700
+}
+
+figure {
+  margin-top: 1.6em;
+  margin-bottom:1.6em
+}
+
+.caption, figure figcaption {
+  color:grey
+}
+
+.caption a, figure figcaption a {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 0 6px;
+  color: #565656;
+  border: none
+}
+
+.caption a[href="#fairuse"], figure figcaption a[href="#fairuse"] {
+  background-color: inherit;
+  padding: 0;
+  color:grey
+}
+
+.caption code, figure figcaption code {
+  color:#757575
+}
+
+figure img {
+  width: 100%;
+  height:auto
+}
+
+.caption + .grid, .caption + figure, .grid + .caption, figure + .caption {
+  margin-top:10px
+}
+
+span[data-type=footnote] {
+  display: inline-block;
+  margin-left: .2em;
+  margin-right: .1em;
+  vertical-align: baseline;
+  position: relative;
+  top:-.4em
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #cecece;
+  margin: 1em 0;
+  padding:0
+}
+
+.menu {
+  text-align: center;
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .1);
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1em;
+  font-weight:500
+}
+
+.menu svg {
+  vertical-align:text-bottom
+}
+
+.menu .wrapper:after {
+  content: "";
+  display: table;
+  clear:both
+}
+
+.menu #tocToggle {
+  margin-right:1em
+}
+
+.menu #logo {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom:.5em
+}
+
+.menu #newsletter {
+  display: block;
+  text-decoration:none
+}
+
+@media (min-width: 590px) {
+  .menu {
+      text-align:left
+  }
+
+  .menu #logo {
+      display: inline;
+      font-size:1em
+  }
+
+  .menu #newsletter {
+      display: inline;
+      float:right
+  }
+}
+
+main {
+  display: flex;
+  flex-direction:column
+}
+
+aside {
+  flex:0 0 300px
+}
+
+article {
+  flex:1 1 auto
+}
+
+article .maxContent {
+  margin: 0 auto;
+  max-width:1100px
+}
+
+@media (min-width: 590px) {
+  main {
+      flex-direction:row
+  }
+}
+
+.navigation {
+  border-top: 1px solid #dadada;
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, .1);
+  margin-top: 3em;
+  padding:2em
+}
+
+.navigation .newsletter {
+  display: none;
+  text-align:center
+}
+
+.navigation .newsletter a {
+  border-color: #29b79b;
+  color: #29b79b;
+  display:inline-block
+}
+
+.navigation .next-page, .navigation .prev-page {
+  text-align: center;
+  margin-bottom:1em
+}
+
+.navigation .next-page a, .navigation .prev-page a {
+  display: block;
+  text-decoration:none
+}
+
+.navigation .next-page a:nth-child(1), .navigation .prev-page a:nth-child(1) {
+  font-weight: 700;
+  margin-bottom:.2em
+}
+
+.navigation .next-page a:nth-child(2), .navigation .prev-page a:nth-child(2) {
+  color:#888
+}
+
+.navigation div[data-type=copyright-page] {
+  margin-top: 4em;
+  max-width:450px
+}
+
+.navigation div[data-type=copyright-page] hr {
+  width:100px
+}
+
+.navigation div[data-type=copyright-page] p {
+  color:#888
+}
+
+@media (min-width: 900px) {
+  .navigation .newsletter {
+      display:block
+  }
+
+  .navigation .prev-page {
+      text-align:left
+  }
+
+  .navigation .next-page {
+      text-align:right
+  }
+}
+
+.grid + .grid {
+  margin-top:10px
+}
+
+@media (min-width: 900px) {
+  .grid {
+      margin-left: -10px;
+      margin-right:-10px
+  }
+
+  .grid.media-width {
+      max-width: 790px;
+      margin-left: auto;
+      margin-right:auto
+  }
+
+  .grid.text-width, section[data-type=chapter] section[data-type^=sect] > h1.grid, section[data-type=chapter] section[data-type^=sect] > h2.grid, section[data-type=chapter] section[data-type^=sect] > ol.grid, section[data-type=chapter] section[data-type^=sect] > p.grid, section[data-type=chapter] section[data-type^=sect] > ul.grid, section[data-type=chapter] > h1.grid, section[data-type=chapter] > h2.grid, section[data-type=chapter] > header.grid, section[data-type=chapter] > ol.grid, section[data-type=chapter] > p.grid, section[data-type=chapter] > ul.grid {
+      max-width: 710px;
+      margin-left: auto;
+      margin-right:auto
+  }
+
+  .grid:after {
+      content: "";
+      display: table;
+      clear:both
+  }
+/* Commented this out
+  [class * =col-] {
+      float: left;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top:0 !important
+  }
+  */
+
+  .col-1-2 {
+      width:50%
+  }
+
+  .col-1-3 {
+      width:33.33%
+  }
+
+  .col-2-3 {
+      width:66.66%
+  }
+
+  .col-1-4 {
+      width:25%
+  }
+
+  .col-1-5 {
+      width:20%
+  }
+
+  .col-2-5 {
+      width:40%
+  }
+
+  .col-3-5 {
+      width:60%
+  }
+
+  .col-2-7 {
+      width:28.57%
+  }
+
+  .col-3-7 {
+      width:42.85%
+  }
+
+  figure, pre {
+      margin-top: 0;
+      margin-bottom:0
+  }
+}
+
+.toc {
+  height: 100%;
+  padding: 1em;
+  background: rgba(255, 255, 255, .9);
+  border-right:1px solid #dadada
+}
+
+.toc h2 {
+  margin-top: .3em;
+  font-size: 1.5em;
+  margin-bottom:.8em
+}
+
+.toc h3 {
+  margin-bottom:.8em
+}
+
+.toc ol, .toc ul {
+  list-style: none;
+  margin: 0;
+  padding:0
+}
+
+.toc ol li, .toc ul li {
+  margin-bottom:.6em
+}
+
+.toc ol ol, .toc ol ul, .toc ul ol, .toc ul ul {
+  margin-left:1em
+}
+
+/*
+Commented this out  because it wasnt working
+.toc a[href * =more-to-come] {
+  color:#cecece
+}
+*/
+
+div[data-type=exercise] {
+  margin-top:2em
+}
+
+div[data-type=exercise] header {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom:1em
+}
+
+div[data-type=exercise] header h2 {
+  display: inline-block;
+  background-color:#fff
+}
+
+div[data-type=footnotes] hr {
+  width:100px
+}
+
+div[data-type=footnotes] ol {
+  color: #888;
+  padding-left:1em
+}
+
+div[data-type=footnotes] ol li {
+  margin-bottom:.6em
+}
+
+@keyframes blinkAnimation {
+  0% {
+      opacity:1
+  }
+
+  50% {
+      opacity:.4
+  }
+
+  100% {
+      opacity:1
+  }
+}
+
+.animate-blink {
+  animation:blinkAnimation 2s cubic-bezier(.455, .03, .515, .955) infinite
+}
+
+section[data-type=chapter] {
+  margin-top:3em
+}
+
+section[data-type=chapter] .part-info {
+  color: #29b79b;
+  margin-bottom: .7em;
+  display:inline-block
+}
+
+section[data-type=chapter] > header {
+  margin-bottom:2em
+}
+
+section[data-type=chapter] > header h1 {
+  margin:0 0 .5em 0
+}
+
+section[data-type=chapter] section[data-type^=sect] > ol, section[data-type=chapter] section[data-type^=sect] > ul, section[data-type=chapter] > ol, section[data-type=chapter] > ul {
+  padding-left: 2em;
+  line-height:1.6em
+}
+
+section[data-type=chapter] section[data-type^=sect] > ol li, section[data-type=chapter] section[data-type^=sect] > ul li, section[data-type=chapter] > ol li, section[data-type=chapter] > ul li {
+  margin-bottom:.5em
+}
+
+section[data-type=chapter] a {
+  box-shadow:inset 0 -2px 0 #757575
+}
+
+section[data-type=chapter] span[data-type=footnote] a {
+  box-shadow:none
+}
+
+section[data-type=chapter] figure figcaption:first-child {
+  margin-bottom:.6em
+}
+
+section[data-type=chapter] figure figcaption:last-child {
+  margin-top:.6em
+}
+
+section[data-type=chapter] figcaption a {
+  box-shadow: none;
+  margin-right:5px
+}
+
+code, pre {
+  font-family: Consolas, Menlo, monospace;
+  color: #313131;
+  background:#f1f1f1
+}
+
+pre {
+  padding: .5em 1em;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  white-space:pre-wrap
+}
+
+code {
+  font-size: .9em;
+  line-height: 1.2em;
+  max-width: 730px;
+  padding:.1em .3em
+}
+
+pre code {
+  padding:0
+}
+
+.grid + .codesplit, figure + .codesplit {
+  margin-top:10px
+}
+
+.p5container {
+  position:relative
+}
+
+.p5container .overlay {
+  position: absolute;
+  width:100%
+}
+
+code .token.keyword {
+  color:#9a5959
+}
+
+code .token.variable {
+  color:#de4646
+}
+
+code .token.function {
+  color:#07b194
+}
+
+code .token.string {
+  color:#ff8600
+}
+
+code .token.number {
+  color:#508c7f
+}
+
+code .comment {
+  color:#b4b4b4
+}
+
+.codesplit.columns .comment p {
+  font-size: 1em;
+  margin:0
+}
+
+.codesplit.columns .code pre {
+  margin: 0;
+  padding:0
+}
+
+@media (max-width: 900px) {
+  .codesplit.columns .comment p:before {
+      content: "// "
+  }
+
+  .codesplit.columns .comment {
+      color: #b4b4b4;
+      background: #f1f1f1;
+      font-family:Consolas, Menlo, monospace
+  }
+}
+
+@media (min-width: 900px) {
+  .codesplit.columns {
+      background: #f1f1f1;
+      padding:.5em 1em
+  }
+
+  .codesplit.columns .pair {
+      border-radius:4px
+  }
+
+  .codesplit.columns .pair:after {
+      content: "";
+      display: table;
+      clear:both
+  }
+
+  .codesplit.columns .pair .comment {
+      width: 40%;
+      float:right
+  }
+
+  .codesplit.columns .pair .comment p {
+      color: #43af9d;
+      padding-right:1em
+  }
+
+  .codesplit.columns .pair .code {
+      width: 60%;
+      float:left
+  }
+
+  .codesplit.columns .pair:not(.no-comment) .code code, .codesplit.columns .pair:not(.no-comment) .code pre {
+      background:0 0
+  }
+
+  .codesplit.columns .pair:not(.no-comment) {
+      background:#e1ecea
+  }
+}
+
+.colormodel .col-2-5 {
+  padding:0 2em 2em 2em
+}
+
+.colormodel figcaption {
+  margin-bottom:1.5em
+}
+
+.colormodel label {
+  display: block;
+  margin-bottom:5px
+}
+
+.colormodel input[type=range] {
+  margin-bottom:20px
+}
+
+.square {
+  display: inline-block;
+  background-color: #000;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+  margin:0 4px
+}
+
+.splash {
+  padding:30px
+}
+
+.splash .byline, .splash h1, .splash h2 {
+  text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff
+}
+
+.splash .byline {
+  margin-top:3em
+}
+
+.splash .byline a {
+  text-decoration:none
+}
+
+.splash h1 {
+  -webkit-font-smoothing: antialiased;
+  margin: 0 0 .8em 0;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  letter-spacing: -.02em;
+  font-weight: 700;
+  margin-bottom:.6em
+}
+
+.splash h2 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 400;
+  margin-bottom:1em
+}
+
+.splash a {
+  text-decoration:none
+}
+
+.splash .btn {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  background-color: rgba(8, 172, 140, .86);
+  border: 2px solid #29b79b;
+  margin:0 auto 1em auto
+}
+
+.splash .btn.invert {
+  color: #29b79b;
+  background:rgba(255, 255, 255, .86)
+}
+
+@media (min-width: 590px) {
+  .splash {
+      text-align:center
+  }
+
+  .splash h1 {
+      margin-top: 2em;
+      font-size:2.7em
+  }
+
+  .splash h2 {
+      display:inline-block
+  }
+
+  .splash h2 {
+      font-size: 1.35em;
+      margin-bottom: 6em;
+      max-width: 670px
+  }
+}
+
