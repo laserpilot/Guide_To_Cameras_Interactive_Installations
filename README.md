@@ -1,7 +1,9 @@
 # Guide to Cameras for Interactive Installations
 
 
-#### Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2021 (update in progress)
+## Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2021 (update in progress)
+
+### Updates are not currently being added to this Readme, but rather in individual files within the Magicbook folder - please check there for more updated versions for now until this message is removed
 
 -------------------
 

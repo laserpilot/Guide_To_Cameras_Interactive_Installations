@@ -14,9 +14,10 @@
       "files": [
         "content/01_01_Webcam.md",
         "content/01_02_Other_RGB_Cameras.md",
-        "content/01_03_InfraredCameras.md",
-        "content/01_04_DepthCameras.md",
-        "content/01_05_LIDAR.md"
+        "content/01_03_Smartphone_Cameras.md",
+        "content/01_04_InfraredCameras.md",
+        "content/01_05_DepthCameras.md",
+        "content/01_06_LIDAR.md"
       ]
     },
     {
