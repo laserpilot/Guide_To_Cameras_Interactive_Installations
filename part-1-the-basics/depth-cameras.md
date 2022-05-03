@@ -4,9 +4,9 @@
 
 ## Depth Cameras
 
-[image source](http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html)
+([image source](http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html))
 
-In a way, Depth Cameras are an offshoot of the IR camera category but they involve some form of infrared light projection that gets reassembled as a depth image using a variety of techniques like time-of-flight (TOF) or structured light. These two detection methods are pretty different and have their own pros and cons, in terms of potential speed: [read about their differences here](http://www.computervisiononline.com/books/computer-vision/time-flight-cameras)
+In a way, these are an offshoot of the IR camera category but they involve some form of infrared light projection that gets reassembled as a depth image using a variety of techniques like time-of-flight (TOF) or structured light. These two detection methods are pretty different and have their own pros and cons, in terms of potential speed: [read about their differences here](http://www.computervisiononline.com/books/computer-vision/time-flight-cameras).
 
 The information that comes back in a depth image is much richer than the usual "2D" image captured by the cameras above, and it gives you the ability to more easily and robustly detect things like hands and fingers. Tracking those features would be difficult and require very controlled conditions with just a monochrome 2D image. The depth information makes it easier for you to detect the difference between a person and the background, and therefore assign more meaningful information to the human trying to interact. This is why it is easier for the Kinect to give you a person's skeletal information, something that would be difficult for just a regular 2D IR image.
 
@@ -14,7 +14,7 @@ There are also other methods of obtaining the same information with a high frame
 
 **Connection types:** Primarily USB2 ([Kinect](http://www.amazon.co.uk/dp/B0036DDW2G/?tag=creativenet-21),[ Asus Xtion](http://www.amazon.co.uk/dp/B005UHB8EK/?tag=creativenet-21), [Panasonic D-Imager](http://www2.panasonic.biz/es/densetsu/device/3DImageSensor/en/index.html), [Intel/Creative Time of Flight cams](http://click.intel.com/intelsdk/Creative\_Interactive\_Gesture\_Camera\_Developer\_Kit-P2061.aspx)), other interfaces in more research oriented/industrial cameras.
 
-**Resolution Range:** This mostly tends to top out around 320x240 @30fps for the more consumer level cameras, mostly for TOF. TOF cameras use different sensors than standard CMOS cams which impacts their speed and resolution. The Kinect is faster and higher resolution because they just use a standard IR cam.  Check the individual camera for it's maximum resolution.
+**Resolution Range:** This mostly tends to top out around 320x240 @30fps for the more consumer level cameras, mostly for TOF. TOF cameras use different sensors than standard CMOS cams which impacts their speed and resolution. The Kinect is faster and higher resolution because they just use a standard IR cam. Check the individual camera for it's maximum resolution.
 
 **Range of effectiveness:** Typically less than 10-15ft (3-5m) for many popular cameras. Very close range (<1ft/30cm) often requires a device particularly suited for close range tracking.
 
