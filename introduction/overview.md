@@ -4,7 +4,7 @@
 
 ## Guide to Cameras for Interactive Installations
 
-Original Text by [Blair Neal](http://blairneal.com) in 2013 with major update in 2021 (update in progress)
+Original Text by [Blair Neal](http://blairneal.com/) in 2013 with major update in 2023 (update in progress)
 
 ***
 
@@ -33,7 +33,7 @@ To-do for 2020 Update:
 
 ### **Preface:**
 
-I published this guide in 2013 on [Creative Applications](http://creativeapplications.net) and moved it to Github in 2016. I don't think the Kinect 2 was even out at the time of the original, and many other cameras have since come and gone. Camera technologies have obviously changed a lot in the 7 years since I published, so it is certainly time for a major update. The 2013 version is being kept in the repository for historical reference.
+I published this guide in 2013 on [Creative Applications](http://creativeapplications.net/) and moved it to Github in 2016. I don't think the Kinect 2 was even out at the time of the original, and many other cameras have since come and gone. Camera technologies have obviously changed a lot in the 7 years since I published, so it is certainly time for a major update. The 2013 version is being kept in the repository for historical reference.
 
 Major changes to this since 2013 are that a lot of technologies have come out, HDMI capture is a lot easier and cheaper than it was in 2013, and Machine Vision algorithms have been able to accomplish things with object and body recognition that didn't even seem casually possible 7 years ago. I'm also covering a slightly broader set of cameras than I did in 2013 for further completeness.
 

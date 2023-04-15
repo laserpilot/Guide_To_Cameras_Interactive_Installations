@@ -1,6 +1,6 @@
-# Wireless Cameras
+# Wireless Imaging Systems
 
-## Wireless cameras
+## Wireless Imaging Systems
 
 Wireless is a bit of a misnomer since almost any camera can be made wireless these days, and obviously even smartphone cameras count as a wireless camera. These would most commonly be used on film shoots for drones or remote monitoring by a director, but there may be limited usage for certain kinds of interactive installations and events. This technology is more about the interface that sends the image signal more than the actual image capture, so there isn't a ton to cover here.
 

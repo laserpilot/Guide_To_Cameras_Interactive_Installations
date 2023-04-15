@@ -2,7 +2,7 @@
 
 ## The Basic Webcam
 
-[image source](http://www.flickr.com/photos/designios/2066516480/)
+<figure><img src="../.gitbook/assets/rgb_webcam.jpg" alt=""><figcaption><p>Example of an RGB Webcam - the Logitech Brio</p></figcaption></figure>
 
 "Webcam" isn't necessarily an industry term, but if you're reading this, you generally know what we're talking about. Common webcams are those that are built into a laptop, or commercially available external devices connected via USB. Most software frameworks support these cameras through [UVC - USB video device class](https://en.wikipedia.org/wiki/USB\_video\_device\_class) - essentially a standard of communication. UVC can be thought of as being similar to how different keyboards and mice input devices are able to be universally recognized by most operating systems without needing to install specific drivers.
 

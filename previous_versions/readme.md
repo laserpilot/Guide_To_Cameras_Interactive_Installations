@@ -296,7 +296,7 @@ I have not personally used one of these cameras yet, but they have some properti
 
 Check out this guy doing some random demos with a thermal camera:
 
-**Connection types:** Most are made to be integrated into existing systems and either have proprietary connections or just output composite video. [Some cameras communicate X/Y position of blobs.](http://www.thermitrack.com)
+**Connection types:** Most are made to be integrated into existing systems and either have proprietary connections or just output composite video. [Some cameras communicate X/Y position of blobs.](http://www.thermitrack.com/)
 
 **Resolution range:** Some are very low resolution (the Thermitrack is 16 x 16px) and some are close to a VGA range, but don't expect to find HD thermal for cheap. You also get a variety of frame rates and contrast ranges.
 
@@ -477,7 +477,7 @@ Low light, De-noising, upscaling and other machine learning cleanup
 
 [Advantage of monochrome cameras for accuracy over color images](https://maxmax.com/faq/camera-tech/debayer-study) [How to Measure the latency of your webcam with openCV](https://www.dlology.com/blog/how-to-measure-the-latency-of-a-webcam-with-opencv/) [DreamChip Cameras](https://www.atom-one.de/#atom-cameras) [Netv2 video capture and overlay device](https://www.adafruit.com/product/4248) [DepthKit](https://www.depthkit.tv)
 
-Huge thanks to [Elliot Woods](http://elliotwoods.info) for a ton of thoughtful suggestions on how to expand the guide from its 2013 version. [Kyle McDonald](http://kylemcdonald.net), [Theo Watson](http://theowatson.com), [Zach Lieberman](http://thesystemis.com) and [Golan Levin](http://www.flong.com) for some great additional tips to help round out some of the suggestions here.
+Huge thanks to [Elliot Woods](http://elliotwoods.info) for a ton of thoughtful suggestions on how to expand the guide from its 2013 version. [Kyle McDonald](http://kylemcdonald.net), [Theo Watson](http://theowatson.com/), [Zach Lieberman](http://thesystemis.com/) and [Golan Levin](http://www.flong.com/) for some great additional tips to help round out some of the suggestions here.
 
 Rough notes for for 2020 update: [GOOGLE DOC FOR CAMERAS](https://docs.google.com/spreadsheets/d/1zM1VhLzEeqW-6vP7xw6DVx-RA1b90rNA8ZxfCAxu-qw/edit#gid=0)
 

@@ -2,7 +2,7 @@
 
 ## High-speed or Slow Motion Cameras
 
-\[NEEDS IMAGE]
+<figure><img src="../.gitbook/assets/slow-cam-inline.jpg.webp" alt=""><figcaption><p>Example of a high speed camera from Phantom Imaging</p></figcaption></figure>
 
 [High-speed Cameras](https://en.wikipedia.org/wiki/High-speed\_camera) are a special class of cameras that can capture 250 frames per second or higher, even up to 250,000fps to several million fps in some cases. If the high-end machine vision cameras above are for real-time processing, I'm thinking of high-speed cameras more for offline recording and viewing - a slightly different workflow. High-speed cameras are fairly uncommon in interactive installations because the (current) limitations of physics mean you can't watch reality in real time and slow motion reality at the same time. Years ago, getting cameras that could capture higher than 60fps were fairly specialized and uncommon, especially for the consumer market. Now almost every flagship smartphone can record 120-240fps and sometimes even higher in burst modes. Some standard webcams can also get up to 120fps. The primary market for professional high speed cameras is for industrial purposes, like the high end machine vision cameras covered above, or for the film industry. Since these applications are fairly niche and low demand, these cameras tend to be incredibly expensive - ranging from around $500USD on the low end to $30,000USD to $50k+ on the high end.
 

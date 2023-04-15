@@ -14,7 +14,7 @@ I have not personally used one of these cameras yet, but they have some properti
 
 Check out this guy doing some random demos with a thermal camera:
 
-**Connection types:** Most are made to be integrated into existing systems and either have proprietary connections or just output composite video. [Some cameras communicate X/Y position of blobs.](http://www.thermitrack.com)
+**Connection types:** Most are made to be integrated into existing systems and either have proprietary connections or just output composite video. [Some cameras communicate X/Y position of blobs.](http://www.thermitrack.com/)
 
 **Resolution range:** Some are very low resolution (the Thermitrack is 16 x 16px) and some are close to a VGA range, but don't expect to find HD thermal for cheap. You also get a variety of frame rates and contrast ranges.
 

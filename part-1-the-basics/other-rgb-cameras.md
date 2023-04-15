@@ -2,15 +2,16 @@
 
 ## Other RGB cameras
 
-[Image source](http://www.brainfarmcinema.com/red.aspx)
+<figure><img src="../.gitbook/assets/dslr.jpg" alt=""><figcaption><p>Example of a DSLR camera</p></figcaption></figure>
 
 \[EDIT IN PROGRESS]
 
 Webcams can only go so far in terms of quality and other features, so in this section we'll cover other types of RGB cameras. Choosing something in this realm usually means you need something with higher image quality, or lower latency, or higher resolution, or some other custom need. To put a finer point on it, I'm bucketing these types of cameras into this section:
 
 * DSLR Cameras
-* High and low end video cameras used for professional filming applications
-* Other basic cameras that can output over HDMI
+* Mirrorless Cameras
+* High and low end video cameras used for professional filming applications (ie camcorders, etc)
+* Other basic cameras that can output over HDMI (action cameras like GoPro will be covered elsewhere)
 
 Besides the increased price, the primary barrier to entry with these cameras is that they aren't as easy to plug in via USB and start working directly with the image, as with UVC webcams. Many cameras in this space either need a special driver or SDK that must be integrated into your software project. Cameras that don't have that option will typically output over some form of standard video cable like HDMI or SDI. HDMI and SDI can then be captured by specialized capture devices that can either be a specialized PCI capture card installed in a desktop, or they can connect over USB.
 

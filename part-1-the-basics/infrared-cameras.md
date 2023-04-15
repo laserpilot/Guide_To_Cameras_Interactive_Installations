@@ -2,6 +2,8 @@
 
 ## Infrared Cameras
 
+<figure><img src="../.gitbook/assets/infrared_example.webp" alt=""><figcaption><p>Example of what footage looks like when captured by an infrared camera</p></figcaption></figure>
+
 Infrared cameras have historically been one of the most important tools for artists working with interactive installations. In earlier years, an abundance of installations were set up in dark spaces for either aesthetic reasons or due to the technological limitations of display technology - aka dim projectors. In recent years, as installations move into well lit spaces and tracking algorithms improve, infrared camera relevance has started to shift. However, they still have some unique capabilities that come in handy for certain types of installations.
 
 As a quick primer, visible light goes from 400-700nm, but certain cameras have the ability to see infrared light from 700-900nm. This allows you to capture things that are not visible to the human eye, like IR tracking lights or a dark space illuminated by infrared light. Most cameras that aren't marketed as exclusively IR capable have infrared filters that block IR light, but in some cases, that filter can be manually removed. In order to limit a camera's ability to only see in infrared light, some may need filters that block all visible light - more info on that [here](http://www.flong.com/blog/2010/a-brief-note-on-infrared-filters-87-vs-87c/)

@@ -2,7 +2,7 @@
 
 ## Thermal Cameras
 
-([image source](http://www.humintell.com/2011/09/truthfulness-detection/thermal/))
+<figure><img src="../.gitbook/assets/flir-thermals.png" alt=""><figcaption><p>Various form factors of thermal cameras</p></figcaption></figure>
 
 [http://en.wikipedia.org/wiki/Thermographic\_camera](http://en.wikipedia.org/wiki/Thermographic\_camera)
 

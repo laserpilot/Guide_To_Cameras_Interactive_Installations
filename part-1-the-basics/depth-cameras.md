@@ -4,7 +4,7 @@
 
 ## Depth Cameras
 
-([image source](http://web.mit.edu/newsoffice/2011/lidar-3d-camera-cellphones-0105.html))
+<figure><img src="../.gitbook/assets/depth-camera-invalidation-low-signal.png" alt=""><figcaption><p>Example of depth map and infrared capture from an Azure Kinect</p></figcaption></figure>
 
 In a way, these are an offshoot of the IR camera category but they involve some form of infrared light projection that gets reassembled as a depth image using a variety of techniques like time-of-flight (TOF) or structured light. These two detection methods are pretty different and have their own pros and cons, in terms of potential speed: [read about their differences here](http://www.computervisiononline.com/books/computer-vision/time-flight-cameras).
 
